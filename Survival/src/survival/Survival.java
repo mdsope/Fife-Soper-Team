@@ -15,7 +15,7 @@ public class Survival {
 
     /**
      * @param args the command line arguments
-     * push junk 
+     * push junk again
      */
     public static void main(String[] args) {
         Game gameOne = new Game();
