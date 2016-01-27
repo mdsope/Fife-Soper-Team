@@ -13,7 +13,7 @@ public class Survival {
 
     /**
      * @param args the command line arguments
-     * push junk
+     * push junk 
      */
     public static void main(String[] args) {
         // TODO code application logic here
