@@ -5,6 +5,8 @@
  */
 package survival;
 
+import byui.cit260.survival.model.Game;
+
 /**
  *
  * @author Tabitha
@@ -16,7 +18,12 @@ public class Survival {
      * push junk 
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Game gameOne = new Game();
+        gameOne.setTotalTime(12.00);
+        gameOne.setTimeLeft(6.00);
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
     }
     
 }
