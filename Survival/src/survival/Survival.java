@@ -6,6 +6,7 @@
 package survival;
 
 import byui.cit260.survival.model.Game;
+import byui.cit260.survival.model.Player;
 
 /**
  *
@@ -24,6 +25,14 @@ public class Survival {
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
+        
+        Player playerOne = new Player();
+        playerOne.setName ("steve");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        
+        
     }
-    
+
 }
