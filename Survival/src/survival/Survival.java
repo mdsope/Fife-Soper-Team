@@ -6,7 +6,9 @@
 package survival;
 
 import byui.cit260.survival.model.Game;
+import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
+import byui.cit260.survival.model.Weapons;
 
 /**
  *
@@ -32,7 +34,21 @@ public class Survival {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
         
+        NonPlayableCharacter nonPlayableCharacterOne = new NonPlayableCharacter();
+        nonPlayableCharacterOne.setName ("steven");
+        nonPlayableCharacterOne.setDescription("awesome");
+        nonPlayableCharacterOne.setCoordinates(0);
         
+        String nonPlayableCharacterInfo = nonPlayableCharacterOne.toString();
+        System.out.println(playerInfo);
+    
+        Weapons weaponsOne = new Weapons();
+        weaponsOne.setStrength(6.00);
+        
+        String weaponsInfo = weaponsOne.toString();
+        System.out.println(playerInfo);
+        
+        CheckOutItem checkOutItem 
     }
 
 }
