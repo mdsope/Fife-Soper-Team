@@ -5,6 +5,7 @@
  */
 package survival;
 
+import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Game;
 import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
@@ -48,7 +49,11 @@ public class Survival {
         String weaponsInfo = weaponsOne.toString();
         System.out.println(playerInfo);
         
-        CheckOutItem checkOutItem 
+        CheckOutItem checkOutItemOne = new CheckOutItem();
+        checkOutItemOne.setSize(4.0);
+        
+        String checkOutItemInfo = checkOutItemOne.toString();
+        System.out.println(checkOutItemInfo);
     }
 
 }
