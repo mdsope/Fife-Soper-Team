@@ -10,6 +10,7 @@ import byui.cit260.survival.model.Game;
 import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
 import byui.cit260.survival.model.Weapons;
+import byui.cit260.survival.model.Enemy;
 
 /**
  *
@@ -54,6 +55,16 @@ public class Survival {
         
         String checkOutItemInfo = checkOutItemOne.toString();
         System.out.println(checkOutItemInfo);
+        
+        Enemy enemyOne = new Enemy(); 
+        enemyOne.setStrength(0);
+        enemyOne.setWeakness("hjfj");
+        
+        String enemyInfo = enemyOne.toString();
+        System.out.println(enemyInfo);
+       
+        
+        
     }
 
 }
