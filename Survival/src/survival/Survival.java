@@ -5,8 +5,12 @@
  */
 package survival;
 
+import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Game;
-import byui.cit260.survival.model.Map;
+import byui.cit260.survival.model.NonPlayableCharacter;
+import byui.cit260.survival.model.Player;
+import byui.cit260.survival.model.Weapons;
+import byui.cit260.survival.model.Enemy;
 
 /**
  *
@@ -25,14 +29,42 @@ public class Survival {
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
-    Map aMap = new Map();
+        
+        Player playerOne = new Player();
+        playerOne.setName ("steve");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        
+        NonPlayableCharacter nonPlayableCharacterOne = new NonPlayableCharacter();
+        nonPlayableCharacterOne.setName ("steven");
+        nonPlayableCharacterOne.setDescription("awesome");
+        nonPlayableCharacterOne.setCoordinates(0);
+        
+        String nonPlayableCharacterInfo = nonPlayableCharacterOne.toString();
+        System.out.println(playerInfo);
     
-    aMap.setRowCount(6);
-    aMap.setColumnCount(5);
-    String mapInfo = aMap.toString();
-        System.out.println(mapInfo);
+        Weapons weaponsOne = new Weapons();
+        weaponsOne.setStrength(6.00);
+        
+        String weaponsInfo = weaponsOne.toString();
+        System.out.println(playerInfo);
+        
+        CheckOutItem checkOutItemOne = new CheckOutItem();
+        checkOutItemOne.setSize(4.0);
+        
+        String checkOutItemInfo = checkOutItemOne.toString();
+        System.out.println(checkOutItemInfo);
+        
+        Enemy enemyOne = new Enemy(); 
+        enemyOne.setStrength(0);
+        enemyOne.setWeakness("hjfj");
+        
+        String enemyInfo = enemyOne.toString();
+        System.out.println(enemyInfo);
+       
+        
+        
     }
-    
-    
-    
+
 }
