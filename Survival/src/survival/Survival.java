@@ -6,6 +6,7 @@
 package survival;
 
 import byui.cit260.survival.model.Game;
+import byui.cit260.survival.model.Map;
 
 /**
  *
@@ -24,6 +25,14 @@ public class Survival {
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
+    Map aMap = new Map();
+    
+    aMap.setRowCount(6);
+    aMap.setColumnCount(5);
+    String mapInfo = aMap.toString();
+        System.out.println(mapInfo);
     }
+    
+    
     
 }
