@@ -11,6 +11,10 @@ import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
 import byui.cit260.survival.model.Weapons;
 import byui.cit260.survival.model.Enemy;
+import byui.cit260.survival.model.Item;
+import byui.cit260.survival.model.Location;
+import byui.cit260.survival.model.Map;
+import byui.cit260.survival.model.RegularScene;
 
 /**
  *
@@ -62,7 +66,44 @@ public class Survival {
         
         String enemyInfo = enemyOne.toString();
         System.out.println(enemyInfo);
+        
+        RegularScene RegularSceneOne = new RegularScene(); 
+        RegularSceneOne.setDescription("asdfasdf");
+        RegularSceneOne.setTravelTime(30);
+        RegularSceneOne.setBlocked("yes");
+        
+        String RegularSceneinfo = RegularSceneOne.toString();
+        System.out.println(RegularSceneinfo);
        
+        Item ItemOne = new Item(); 
+        ItemOne.setType("asdfasdf");
+        ItemOne.setAmount(30);
+        ItemOne.setName("yes");
+        ItemOne.setDescription("very shiny");
+        ItemOne.setAttribute("sexiness");
+        
+        String Iteminfo = RegularSceneOne.toString();
+        System.out.println(Iteminfo);
+        
+        Map MapOne = new Map(); 
+        MapOne.setRowCount(50);
+        MapOne.setColumnCount(30);
+        
+        
+        
+        String Mapinfo = MapOne.toString();
+        System.out.println(Mapinfo);
+        
+        Location LocationOne = new Location(); 
+        LocationOne.setRow(50);
+        LocationOne.setColumn(30);
+        LocationOne.setVisited("yes");
+        
+        
+        
+        String Locationinfo = LocationOne.toString();
+        System.out.println(Locationinfo);
+        
         
         
     }
