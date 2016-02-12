@@ -78,14 +78,41 @@ public class InventoryControlTest {
     @Test
     public void testGetboots() {
         System.out.println("getboots");
-        double radius = 0.0;
-        double height = 0.0;
+        System.out.println("\tTest case #1'");
+        double radius = 2.0;
+        double height = 6.0;
         InventoryControl instance = new InventoryControl();
-        double expResult = 0.0;
+        double expResult = 75.39822369;
         double result = instance.getboots(radius, height);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        assertEquals(expResult, result, 0.5);
+        
+        System.out.println("\tTest case #2'");
+        radius = -1.0;
+        height = 6.0;
+        expResult = -1;
+        result = instance.getboots(radius, height);
+        assertEquals(expResult, result, 0.5);
+        
+        System.out.println("\tTest case #3'");
+        radius = 2.0;
+        height = -1.0;
+        expResult = -1;
+        result = instance.getboots(radius, height);
+        assertEquals(expResult, result, 0.5);
+        
+        System.out.println("\tTest case #4'");
+        radius = 1.0;
+        height = 22.0;
+        expResult = -3.0;
+        result = instance.getboots(radius, height);
+        assertEquals(expResult, result, 0.5);
+        
+        System.out.println("\tTest case #5'");
+        radius = 4.0;
+        height = 2.0;
+        expResult = -4.0;
+        result = instance.getboots(radius, height);
+        assertEquals(expResult, result, 0.5);
+       }
     
 }
