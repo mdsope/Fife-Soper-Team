@@ -30,6 +30,23 @@ public class InventoryControl {
 
     }
 
+    public double getTiara(double base, double height) {
+
+        if (base < 0) {
+            return -1;
+        }
+        if (height < 0) {
+            return -1;
+        }
+
+        double area = (6 * base * height) + (3 * Math.sqrt(3 * Math.pow(base, 2)));
+        if (area > 90 || area < 80) {
+            return -4;
+        }
+
+        return area;
+    }
+
     public double getboots(double radius, double height) {
         if (radius < 0) {
             return -1;
@@ -46,5 +63,6 @@ public class InventoryControl {
             return -3;
         }
         return volume;
+
     }
 }
