@@ -12,6 +12,7 @@ import java.util.Objects;
  * @author Tabitha
  */
 public class Location {
+
     private double row;
     private double column;
     private String visited;
@@ -80,7 +81,5 @@ public class Location {
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
-    
-    
-    
+
 }

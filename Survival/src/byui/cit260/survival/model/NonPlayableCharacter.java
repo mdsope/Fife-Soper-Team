@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author macds
  */
-public class NonPlayableCharacter implements Serializable{
+public class NonPlayableCharacter implements Serializable {
+
     private String name;
 
     public String getName() {

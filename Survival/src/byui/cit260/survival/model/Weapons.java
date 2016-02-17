@@ -11,10 +11,11 @@ import java.io.Serializable;
  *
  * @author macds
  */
-public class Weapons implements Serializable{
+public class Weapons implements Serializable {
+
     private double strength;
 
-        public Weapons() {
+    public Weapons() {
     }
 
     @Override
@@ -46,7 +47,7 @@ public class Weapons implements Serializable{
     public String toString() {
         return "Weapons{" + "strength=" + strength + '}';
     }
-        
+
     public double getStrength() {
         return strength;
     }
@@ -55,7 +56,4 @@ public class Weapons implements Serializable{
         this.strength = strength;
     }
 
-
-    
-    
 }

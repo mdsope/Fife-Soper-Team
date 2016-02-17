@@ -11,7 +11,8 @@ import java.io.Serializable;
  *
  * @author macds
  */
-public class CheckOutItem implements Serializable{
+public class CheckOutItem implements Serializable {
+
     private double size;
 
     public CheckOutItem() {
@@ -54,5 +55,5 @@ public class CheckOutItem implements Serializable{
     public String toString() {
         return "CheckOutItem{" + "size=" + size + '}';
     }
-    
+
 }

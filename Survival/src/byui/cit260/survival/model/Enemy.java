@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author macds
  */
-public class Enemy implements Serializable{
+public class Enemy implements Serializable {
+
     private String weakness;
     private double strength;
 
@@ -68,7 +69,5 @@ public class Enemy implements Serializable{
     public String toString() {
         return "Enemy{" + "weakness=" + weakness + ", strength=" + strength + '}';
     }
-    
-    
-    
+
 }

@@ -37,8 +37,8 @@ public class InventoryControl {
         if (height < 0) {
             return -1;
         }
-        double volume = Math.PI * Math.pow (radius, 2) * (height);
-        
+        double volume = Math.PI * Math.pow(radius, 2) * (height);
+
         if (volume > 80) {
             return -4;
         }

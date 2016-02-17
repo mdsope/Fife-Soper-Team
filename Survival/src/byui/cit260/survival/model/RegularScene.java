@@ -10,6 +10,7 @@ package byui.cit260.survival.model;
  * @author Tabitha
  */
 public class RegularScene {
+
     private String description;
     private double travelTime;
     private String blocked;
@@ -45,10 +46,5 @@ public class RegularScene {
     public String toString() {
         return "RegularScene{" + "description=" + description + ", travelTime=" + travelTime + ", blocked=" + blocked + '}';
     }
-    
-    
-    
-    
-    
-    
+
 }
