@@ -12,6 +12,7 @@ import java.util.Objects;
  * @author Tabitha
  */
 public class Item {
+
     private String type;
     private double amount;
     private String name;
@@ -106,8 +107,5 @@ public class Item {
     public String toString() {
         return "Item{" + "type=" + type + ", amount=" + amount + ", name=" + name + ", Description=" + Description + ", attribute=" + attribute + '}';
     }
-    
-    
-    
-    
+
 }

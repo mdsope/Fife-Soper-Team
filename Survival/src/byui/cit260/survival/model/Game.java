@@ -12,6 +12,7 @@ import java.io.Serializable;
  * @author Tabitha
  */
 public class Game implements Serializable {
+
     //class variables
     private double totalTime;
     private double timeLeft;

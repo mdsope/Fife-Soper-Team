@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author macds
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
+
     //class variables
     private String name;
 
@@ -57,6 +58,4 @@ public class Player implements Serializable{
         return "Player{" + "name=" + name + '}';
     }
 
-    
-    
 }

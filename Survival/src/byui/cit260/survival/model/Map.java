@@ -10,6 +10,7 @@ package byui.cit260.survival.model;
  * @author Tabitha
  */
 public class Map {
+
     private double rowCount;
     private double columnCount;
 
@@ -30,7 +31,7 @@ public class Map {
 
     public void setColumnCount(double columnCount) {
         this.columnCount = columnCount;
-        
+
     }
 
     @Override
@@ -60,14 +61,12 @@ public class Map {
             return false;
         }
         return true;
-        
+
     }
 
     @Override
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
-            
-    
+
 }

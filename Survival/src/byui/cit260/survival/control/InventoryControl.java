@@ -30,7 +30,6 @@ public class InventoryControl {
 
     }
 
-
     public double getTiara(double base, double height) {
 
         if (base < 0) {
@@ -55,8 +54,8 @@ public class InventoryControl {
         if (height < 0) {
             return -1;
         }
-        double volume = Math.PI * Math.pow (radius, 2) * (height);
-        
+        double volume = Math.PI * Math.pow(radius, 2) * (height);
+
         if (volume > 80) {
             return -4;
         }

@@ -16,7 +16,7 @@ import org.junit.BeforeClass;
  * @author Tabitha
  */
 public class InventoryControlTest {
-    
+
     public InventoryControlTest() {
     }
 
@@ -41,34 +41,33 @@ public class InventoryControlTest {
         double expResult = 24.0;
         double result = instance.getSize(length, width);
         assertEquals(expResult, result, 0.4);
-       
-        
-                System.out.println("\tTest case #2'");
-         length = -1.0;
-         width = 6.0;
-         expResult = -1.0;
-         result = instance.getSize(length, width);
+
+        System.out.println("\tTest case #2'");
+        length = -1.0;
+        width = 6.0;
+        expResult = -1.0;
+        result = instance.getSize(length, width);
         assertEquals(expResult, result, 0.4);
-        
-            System.out.println("\tTest case #3'");
-         length = 4.0;
-         width = -1.0;
-         expResult = -1.0;
-         result = instance.getSize(length, width);
+
+        System.out.println("\tTest case #3'");
+        length = 4.0;
+        width = -1.0;
+        expResult = -1.0;
+        result = instance.getSize(length, width);
         assertEquals(expResult, result, 0.4);
-        
-            System.out.println("\tTest case #4'");
-         length = 4.0;
-         width = 4.0;
-         expResult = -3.0;
-         result = instance.getSize(length, width);
+
+        System.out.println("\tTest case #4'");
+        length = 4.0;
+        width = 4.0;
+        expResult = -3.0;
+        result = instance.getSize(length, width);
         assertEquals(expResult, result, 0.4);
-        
-            System.out.println("\tTest case #5'");
-         length = 8.0;
-         width = 4.0;
-         expResult = -4.0;
-         result = instance.getSize(length, width);
+
+        System.out.println("\tTest case #5'");
+        length = 8.0;
+        width = 4.0;
+        expResult = -4.0;
+        result = instance.getSize(length, width);
         assertEquals(expResult, result, 0.4);
     }
 
@@ -85,35 +84,37 @@ public class InventoryControlTest {
         double expResult = 75.39822369;
         double result = instance.getboots(radius, height);
         assertEquals(expResult, result, 0.5);
-        
+
         System.out.println("\tTest case #2'");
         radius = -1.0;
         height = 6.0;
         expResult = -1;
         result = instance.getboots(radius, height);
         assertEquals(expResult, result, 0.5);
-        
+
         System.out.println("\tTest case #3'");
         radius = 2.0;
         height = -1.0;
         expResult = -1;
         result = instance.getboots(radius, height);
         assertEquals(expResult, result, 0.5);
-        
+
         System.out.println("\tTest case #4'");
         radius = 1.0;
         height = 22.0;
         expResult = -3.0;
         result = instance.getboots(radius, height);
         assertEquals(expResult, result, 0.5);
-        
+
         System.out.println("\tTest case #5'");
         radius = 4.0;
         height = 2.0;
         expResult = -4.0;
         result = instance.getboots(radius, height);
         assertEquals(expResult, result, 0.5);
-       }
+
+    }
+
     @Test
     public void testGetTiara() {
         System.out.println("getTiara");
@@ -124,48 +125,48 @@ public class InventoryControlTest {
         double expResult = 82.3923;
         double result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-        
-         System.out.println("\tTest case #2'");
-         base = -1.0;
-         height = 6.0;
-         expResult = -1.0;
-         result = instance.getTiara(base, height);
+
+        System.out.println("\tTest case #2'");
+        base = -1.0;
+        height = 6.0;
+        expResult = -1.0;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-       
+
         System.out.println("\tTest case #3'");
-         base = 2.0;
-         height = -1.0;
-         expResult = -1.0;
-         result = instance.getTiara(base, height);
+        base = 2.0;
+        height = -1.0;
+        expResult = -1.0;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-        
+
         System.out.println("\tTest case #4'");
-         base = 8.0;
-         height = 2.0;
-         expResult = -4.0;
-         result = instance.getTiara(base, height);
+        base = 8.0;
+        height = 2.0;
+        expResult = -4.0;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-        
+
         System.out.println("\tTest case #5'");
-         base = 1.0;
-         height = 14.0;
-         expResult = 89.1961;
-         result = instance.getTiara(base, height);
+        base = 1.0;
+        height = 14.0;
+        expResult = 89.1961;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-        
+
         System.out.println("\tTest case #6'");
-         base = 8.0;
-         height = 1.0;
-         expResult = 89.5692;
-         result = instance.getTiara(base, height);
+        base = 8.0;
+        height = 1.0;
+        expResult = 89.5692;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
-        
+
         System.out.println("\tTest case #7'");
-         base = 1.0;
-         height = 13.0;
-         expResult = 83.1961;
-         result = instance.getTiara(base, height);
+        base = 1.0;
+        height = 13.0;
+        expResult = 83.1961;
+        result = instance.getTiara(base, height);
         assertEquals(expResult, result, 0.4);
     }
-    
+
 }

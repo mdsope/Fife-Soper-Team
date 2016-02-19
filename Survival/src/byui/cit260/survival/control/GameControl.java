@@ -6,6 +6,7 @@
 package byui.cit260.survival.control;
 
 import byui.cit260.survival.model.Player;
+import survival.Survival;
 
 /**
  *
@@ -13,9 +14,19 @@ import byui.cit260.survival.model.Player;
  */
 public class GameControl {
 
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n*** createPlayer() function called ***");
-        return new Player();
+    public static Player createPlayer(String name) {
+        if(name == null) {
+            return null;
+        }
+        Player player = new Player();
+        player.setName(name);
+        
+        Survival.setPlayer(player);
+        return player;
     }
+    
+    
+    
+    
     
 }

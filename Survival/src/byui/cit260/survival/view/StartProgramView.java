@@ -63,7 +63,8 @@ this.displayBanner();
                 
             }while (!done);
             
-            private boolean doAction(String playersName){
+           }
+     private boolean doAction(String playersName){
                 if (playersName.length() < 2){
                     System.out.println("\n Invalid players name:"
                     + "The Name must be greater than one character in length");
@@ -75,9 +76,11 @@ this.displayBanner();
             System.out.println("\nError creating the player.");
             return false;
         }
-        
-   }
-
+     this.displayNextView();
+        return true;
+     }
+    
+     
     private String getPlayersName() {
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; // value returned
@@ -90,7 +93,7 @@ this.displayBanner();
                 value = value.trim();
                 
                 if (value.length() <1){//value is blank
-                    System.out.println("\nInvalid value: value can not be blank");
+                    System.out.println("\nInvalid value: val ue can not be blank");
                     continue;
                 }
                 break;
@@ -98,11 +101,21 @@ this.displayBanner();
         return value;
     }
 
-    private boolean doAction(String playersName) {
-         System.out.println("\n*** doAction() called ***");
-                 return true;
+    private void displayNextView() {
+        System.out.println("\n*** displayNextView() called ***");
     }
-}
+
+    
+    
+        
+    }
+    
+        
+    
+
+    
+    
+
 
     
 
