@@ -24,6 +24,10 @@ public class GameControl {
         Survival.setPlayer(player);
         return player;
     }
+
+    public static void creatNewGame(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

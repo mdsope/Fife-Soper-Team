@@ -101,8 +101,18 @@ this.displayBanner();
         return value;
     }
 
-    private void displayNextView() {
-        System.out.println("\n*** displayNextView() called ***");
+    private void displayNextView(Player player) {
+        System.out.println("\n==========================================="
+                           + "\n Welcome to the game " + player.getName()
+                           + "\n we hope you hava a lot of fun!"
+                           + "\n==========================================="
+                           );
+        
+            // Create MainMenuView Object
+            MainMenuView mainMenuView = new MainMenuView();
+            
+            // Display the main menu view
+            mainMenuView.displayMainMenuView();
     }
 
     
