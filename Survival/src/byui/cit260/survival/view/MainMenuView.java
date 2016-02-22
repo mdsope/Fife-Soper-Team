@@ -5,6 +5,10 @@
  */
 package byui.cit260.survival.view;
 
+import byui.cit260.survival.control.GameControl;
+import java.util.Scanner;
+import survival.Survival;
+
 /**
  *
  * @author macds
@@ -26,25 +30,35 @@ public class MainMenuView {
          boolean done = false; // set flag to not done
          do {
              // prompt for and get players name
-             String menuOPtion = this.getMenuOPtion();
-             if (menuOPtion.toUpperCase().equals("Q")) // user wants to quit
+             String menuOption = this.getMenuOption();
+             if (menuOption.toUpperCase().equals("Q")) // user wants to quit
                  return; // exit the game
              
              // do the requested action and display the next view
-             done = this.doAction(menuOPtion);
+             done = this.doAction(menuOption);
          } while (!done);
          
     }
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOPtion() function called ***");
-        return "N";
+        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
+        String value = ""; // value returned
+        boolean valid = false; // initialize to not valid
         
+        while(!valid){//loop while an invalid value is enter
+                System.out.println("\n" + this.menu);
+                
+                value = keyboard.nextLine(); // get next line typed on keyboard
+                value = value.trim();
+                
+                if (value.length() <1){//value is blank
+                    System.out.println("\nInvalid value: val ue can not be blank");
+                    continue;
+                }
+                break;
+        }
+        return value;
     }
-    private boolean doAction(String menuOPtion) {
-        System.out.println("\n*** doAction() function called ***");
-        return true;
-        
-    }
+
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); // convert choice to upper case
@@ -68,12 +82,8 @@ public class MainMenuView {
                 
         }
         return false;
-        
+    }
         private void startNewGame() {
-            GameControl.creatNewGame(Survival.getPlayer());
-            
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayMenu();
             System.out.println("*** startNewGame function called ***");
         }
         private void startExistingGame() {
@@ -86,4 +96,4 @@ public class MainMenuView {
             System.out.println("*** displayHelpMenu function called ***");
         }
     }
-}
+
