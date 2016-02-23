@@ -15,13 +15,17 @@ import java.util.Scanner;
  *
  * @author Tabitha
  */
-public class StartProgramView {
-    private String promptMessage;
-    public StartProgramView(){
-this.promptMessage = "\nPlease enter your name:"; 
-this.displayBanner();
 
-        }
+
+public class StartProgramView {
+
+    private String promptMessage;
+
+    public StartProgramView() {
+        this.promptMessage = "\nPlease enter your name:";
+        this.displayBanner();
+
+    }
 
     private void displayBanner() {
         System.out.println(
@@ -47,90 +51,74 @@ this.displayBanner();
                 + " \n* so it will be easy to overcome a weak enemy           *"
                 + " \n* they have to be weak.                                 *"
                 + " \n*********************************************************"
-                         );
+        );
     }
 
     public void displayStartProgramView() {
-         boolean done = false; // set flag to not done
-            do{ 
-                //prompt for and get players name
-                String playersName = this.getPlayersName();
-                if (playersName.toUpperCase().equals("Q")) //user wants to quit
-                    return; //exit the game
-                
-                // do the requsted action and display the next view
-                done = this.doAction(playersName);
-                
-            }while (!done);
-            
-           }
-     private boolean doAction(String playersName){
-                if (playersName.length() < 2){
-                    System.out.println("\n Invalid players name:"
-                    + "The Name must be greater than one character in length");
-                return false;
+        boolean done = false; // set flag to not done
+        do {
+            //prompt for and get players name
+            String playersName = this.getPlayersName();
+            if (playersName.toUpperCase().equals("Q")) //user wants to quit
+            {
+                return; //exit the game
             }
+            // do the requsted action and display the next view
+            done = this.doAction(playersName);
+
+        } while (!done);
+
+    }
+
+    private boolean doAction(String playersName) {
+        if (playersName.length() < 2) {
+            System.out.println("\n Invalid players name:"
+                    + "The Name must be greater than one character in length");
+            return false;
+        }
         Player player = GameControl.createPlayer(playersName);
-        
-        if (player==null){// if unsuccesful
+
+        if (player == null) {// if unsuccesful
             System.out.println("\nError creating the player.");
             return false;
         }
-     this.displayNextView(player);
+        this.displayNextView(player);
         return true;
-     }
-    
-     
+    }
+
     private String getPlayersName() {
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; // value returned
         boolean valid = false; // initialize to not valid
-        
-        while(!valid){//loop while an invalid value is enter
-                System.out.println("\n" + this.promptMessage);
-                
-                value = keyboard.nextLine(); // get next line typed on keyboard
-                value = value.trim();
-                
-                if (value.length() <1){//value is blank
-                    System.out.println("\nInvalid value: value can not be blank");
-                    continue;
-                }
-                break;
+
+        while (!valid) {//loop while an invalid value is enter
+            System.out.println("\n" + this.promptMessage);
+
+            value = keyboard.nextLine(); // get next line typed on keyboard
+            value = value.trim();
+
+            if (value.length() < 1) {//value is blank
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;
         }
         return value;
     }
 
     private void displayNextView(Player player) {
         System.out.println("\n==========================================="
-                           + "\n Welcome to the game " + player.getName()
-                           + "\n we hope you hava a lot of fun!"
-                           + "\n==========================================="
-                           );
-        
-            // Create MainMenuView Object
-            MainMenuView mainMenuView = new MainMenuView();
-            
-            // Display the main menu view
-            mainMenuView.displayMainMenuView();
-            
-            
+                + "\n Welcome to the game " + player.getName()
+                + "\n we hope you hava a lot of fun!"
+                + "\n==========================================="
+        );
+
+        // Create MainMenuView Object
+        MainMenuView mainMenuView = new MainMenuView();
+
+        // Display the main menu view
+        mainMenuView.displayMainMenuView();
 
     }
 
-    
-    
-        
-    }
-    
-        
-    
-
-    
-    
-
-
-    
-
-
-
+}

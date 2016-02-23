@@ -17,16 +17,16 @@ public class HelpMenuView {
 
     private String menu;
 
-    public  HelpMenuView() {
+    public HelpMenuView() {
         this.menu = "\n"
                 + "\n-----------------------------------------"
                 + "\n| Getting help                          |"
                 + "\n-----------------------------------------"
                 + "\nG - What is the goal of the game"
                 + "\nM - How to Move"
-                + "\nE - Estemating the amount of resources"
-                + "\nH - harvesting resources"
-                + "\nD - Delivering resources to warehouse"
+                + "\nF - Fighting enemies"
+                + "\nP - Picking up Items"
+                + "\nE - End Game"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------";
     }
@@ -75,7 +75,7 @@ public class HelpMenuView {
                 this.goalOfGame();
                 break;
             case "M": // get and start existing game
-                this.moving();
+                this.mapAndMoving();
                 break;
             case "F": // display help menu
                 this.fightingEnemies();
@@ -99,8 +99,11 @@ public class HelpMenuView {
         System.out.println("*** goalOfGame() function called ***");
     }
 
-    private void moving() {
-        System.out.println("*** moving() function called ***");
+    private void mapAndMoving() {
+        MapAndMovingView mapAndMovingView = new MapAndMovingView();
+
+        // Display the main menu view
+        mapAndMovingView.displayMapAndMovingView();
     }
 
     private void fightingEnemies() {
