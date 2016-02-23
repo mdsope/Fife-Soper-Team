@@ -76,7 +76,7 @@ this.displayBanner();
             System.out.println("\nError creating the player.");
             return false;
         }
-     this.displayNextView();
+     this.displayNextView(player);
         return true;
      }
     
@@ -93,7 +93,7 @@ this.displayBanner();
                 value = value.trim();
                 
                 if (value.length() <1){//value is blank
-                    System.out.println("\nInvalid value: val ue can not be blank");
+                    System.out.println("\nInvalid value: value can not be blank");
                     continue;
                 }
                 break;
@@ -113,6 +113,9 @@ this.displayBanner();
             
             // Display the main menu view
             mainMenuView.displayMainMenuView();
+            
+            
+
     }
 
     

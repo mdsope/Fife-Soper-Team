@@ -14,6 +14,7 @@ import survival.Survival;
  */
 public class GameControl {
 
+    
     public static Player createPlayer(String name) {
         if(name == null) {
             return null;
@@ -26,7 +27,7 @@ public class GameControl {
     }
 
     public static void creatNewGame(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.println("\n*** createNewGame Stub Function called ***");
     }
     
     

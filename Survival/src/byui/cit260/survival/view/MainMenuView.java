@@ -93,7 +93,11 @@ public class MainMenuView {
             System.out.println("*** saveGame function called ***");
         }
         private void displayHelpMenu() {
-            System.out.println("*** displayHelpMenu function called ***");
+                    // Create MainMenuView Object
+            HelpMenuView helpMenuView = new HelpMenuView();
+            
+            // Display the main menu view
+            helpMenuView.displayHelpMenuView();
         }
     }
 

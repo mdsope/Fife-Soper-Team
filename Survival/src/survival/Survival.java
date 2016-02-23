@@ -50,9 +50,13 @@ public class Survival {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
         
-       
+        /*
+        // Create MainMenuView Object
+        HelpMenuView helpMenuView = new HelpMenuView();
         
-           
+        // Display the main menu view
+        helpMenuView.displayHelpMenuView();
+        */    
         
             
         }
