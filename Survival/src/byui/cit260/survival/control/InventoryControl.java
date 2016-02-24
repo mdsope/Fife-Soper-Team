@@ -11,7 +11,7 @@ package byui.cit260.survival.control;
  */
 public class InventoryControl {
 
-    public double getDress(double length, double width) {
+    public double getSize(double length, double width) {
 
         if (length < 0) {
             return -1;
