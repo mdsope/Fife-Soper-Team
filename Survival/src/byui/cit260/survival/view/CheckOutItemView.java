@@ -97,14 +97,24 @@ public class CheckOutItemView {
                        
                      
                        // if unsuccessful then display error and return
-                       if (tiara == -1);
+                       if (tiara == -1)
+                       {
                        this.promptMessage = "Base or Height is below 0";
-                       
-                       if (tiara == -4);
+                       }
+                       else if (tiara == -4)
+                       {
                        this.promptMessage = "Area is not within 80 or 90";
+                       }
                        // if successful then display succes message
-                       if (tiara > 0);
+                       else if (tiara > 0)
+                       {
                        this.promptMessage = "Congrats";
+                       }
+                       // if something crazy happens
+                       else
+                       {
+                           this.promptMessage = "uuuuuhhh somethings wrong";
+                                   }
               }
                private void getDress(){
                        System.out.println("\n getDress function called");
