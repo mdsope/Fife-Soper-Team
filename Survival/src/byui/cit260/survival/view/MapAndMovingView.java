@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.view;
 
+import byui.cit260.survival.control.MapControl;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,7 @@ import java.util.Scanner;
 class MapAndMovingView {
 
     private String menu;
+    private String promptMessage;
 
     public MapAndMovingView() {
         this.menu = ""
@@ -97,191 +99,120 @@ class MapAndMovingView {
     }
 
     public boolean doAction(String choice) {
-
-        choice = choice.toUpperCase(); // convert choice to upper case
-
-        switch (choice) {
-            case "Room 1": // create and start the new game
-                this.roomOne();
-                break;
-            case "Room 2": // create and start the new game
-                this.roomTwo();
-                break;
-            case "Room 3": // create and start the new game
-                this.roomThree();
-                break;
-            case "Room 4": // create and start the new game
-                this.roomFour();
-                break;
-            case "Room 5": // create and start the new game
-                this.roomFive();
-                break;
-            case "Room 6": // create and start the new game
-                this.roomSix();
-                break;
-            case "Room 7": // create and start the new game
-                this.roomSeven();
-                break;
-            case "Room 8": // create and start the new game
-                this.roomEight();
-                break;
-            case "Room 9": // create and start the new game
-                this.roomNine();
-                break;
-            case "Room 10": // create and start the new game
-                this.roomTen();
-                break;
-            case "Room 11": // create and start the new game
-                this.roomEleven();
-                break;
-            case "Room 12": // create and start the new game
-                this.roomTwelve();
-                break;
-            case "Room 13": // create and start the new game
-                this.roomThirteen();
-                break;
-            case "Room 14": // create and start the new game
-                this.roomFourteen();
-                break;
-            case "Room 15": // create and start the new game
-                this.roomFifthteen();
-                break;
-            case "Room 16": // create and start the new game
-                this.roomSixteen();
-                break;
-            case "Room 17": // create and start the new game
-                this.roomSeventeen();
-                break;
-            case "Room 18": // create and start the new game
-                this.roomEighteen();
-                break;
-            case "Hall 1": // create and start the new game
-                this.hallOne();
-                break;
-            case "Hall 2": // create and start the new game
-                this.hallTwo();
-                break;
-            case "Hall 3": // create and start the new game
-                this.hallThree();
-                break;
-            case "Hall 4": // create and start the new game
-                this.hallFour();
-                break;
-            case "Hall 5": // create and start the new game
-                this.hallFive();
-                break;
-            case "Hall 6": // create and start the new game
-                this.hallSix();
-                break;
-            case "Hall 7": // create and start the new game
-                this.hallSeven();
-                break;
-            default:
-                System.out.println("\n*** Invalid selection *** Try again");
-                break;
-
-        }
-        return false;
+        return  this.move(choice);
+    }
+    
+    private boolean move(String roomNumber) {
+            
+            // call control function to determine if valid room
+            boolean result= MapControl.moveToRoom (roomNumber);
+            // if invalid room display "You can not move to this room" and return false
+            
+            
+            return true;
+        
     }
 
-    private void roomOne() {
-        System.out.println("*** function called ***");
+    /*    private void roomOne() {
+    System.out.println("/nMove to room 1 "
+    + "Room 2");
+    
     }
-
+    
     private void roomTwo() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomThree() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomFour() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomFive() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomSix() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomSeven() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomEight() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomNine() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomTen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomEleven() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomTwelve() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomThirteen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomFourteen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomFifthteen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomSixteen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomSeventeen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void roomEighteen() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallOne() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallTwo() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallThree() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallFour() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallFive() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallSix() {
-        System.out.println("*** function called ***");
+    System.out.println("*** function called ***");
     }
-
+    
     private void hallSeven() {
-        System.out.println("*** function called ***");
-    }
+    System.out.println("*** function called ***");
+    }*/
 
 }
