@@ -9,14 +9,12 @@ import byui.cit260.survival.model.Game;
 import byui.cit260.survival.model.Player;
 import byui.cit260.survival.view.StartProgramView;
 
-
-
 /**
  *
  * @author Tabitha
  */
 public class Survival {
-    
+
     private static Game currentGame = null;
 
     public static Game getCurrentGame() {
@@ -37,32 +35,23 @@ public class Survival {
     private static Player player = null;
 
     /**
-
+     *
      * @param args the command line arguments
-     
+     *
      */
-
-    
     //displays the start program view
-     
     public static void main(String[] args) {
-        
+
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
-        
+
         /*
         // Create MainMenuView Object
         HelpMenuView helpMenuView = new HelpMenuView();
         
         // Display the main menu view
         helpMenuView.displayHelpMenuView();
-        */    
-        
-            
-        }
-        
-        
-        
-     }
+         */
+    }
 
-
+}
