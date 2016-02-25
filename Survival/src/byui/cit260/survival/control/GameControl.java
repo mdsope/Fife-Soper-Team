@@ -14,24 +14,19 @@ import survival.Survival;
  */
 public class GameControl {
 
-    
     public static Player createPlayer(String name) {
-        if(name == null) {
+        if (name == null) {
             return null;
         }
         Player player = new Player();
         player.setName(name);
-        
+
         Survival.setPlayer(player);
         return player;
     }
 
     public static void creatNewGame(Player player) {
-                System.out.println("\n*** createNewGame Stub Function called ***");
+        System.out.println("\n*** createNewGame Stub Function called ***");
     }
-    
-    
-    
-    
-    
+
 }

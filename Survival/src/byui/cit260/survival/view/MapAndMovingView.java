@@ -99,18 +99,17 @@ class MapAndMovingView {
     }
 
     public boolean doAction(String choice) {
-        return  this.move(choice);
+        return this.move(choice);
     }
-    
+
     private boolean move(String roomNumber) {
-            
-            // call control function to determine if valid room
-            boolean result= MapControl.moveToRoom (roomNumber);
-            // if invalid room display "You can not move to this room" and return false
-            
-            
-            return true;
-        
+
+        // call control function to determine if valid room
+        boolean result = MapControl.moveToRoom(roomNumber);
+        // if invalid room display "You can not move to this room" and return false
+
+        return true;
+
     }
 
     /*    private void roomOne() {
@@ -214,5 +213,4 @@ class MapAndMovingView {
     private void hallSeven() {
     System.out.println("*** function called ***");
     }*/
-
 }

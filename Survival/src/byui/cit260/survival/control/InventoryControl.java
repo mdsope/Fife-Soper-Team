@@ -36,7 +36,7 @@ public class InventoryControl {
             return -1;
         }
         if (height < 0) {
-            
+
             return -1;
         }
 

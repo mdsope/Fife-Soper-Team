@@ -10,6 +10,7 @@ package byui.cit260.survival.view;
  * @author macds
  */
 public class GameMenuView {
+
     void displayMenu() {
         System.out.println("\n*** displayMenu stub funtion called ***");
     }
