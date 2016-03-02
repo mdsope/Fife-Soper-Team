@@ -13,12 +13,12 @@ import survival.Survival;
  *
  * @author macds
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private String menu;
+    
 
     public MainMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------"
                 + "\n| Main Menu                             |"
                 + "\n-----------------------------------------"
@@ -26,44 +26,9 @@ public class MainMenuView {
                 + "\nG - Get and start saved game"
                 + "\nH - Get help on how to play the game"
                 + "\nQ - Quit"
-                + "\n-----------------------------------------";
+                + "\n-----------------------------------------");
     }
-
-    public void displayMainMenuView() {
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; // exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        } while (!done);
-
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; // value returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim();
-
-            if (value.length() < 1) {//value is blank
-                System.out.println("\nInvalid value: val ue can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); // convert choice to upper case
