@@ -12,13 +12,13 @@ import java.util.Scanner;
  *
  * @author macds
  */
-class MapAndMovingView {
+public class MapAndMovingView extends View {
 
     private String menu;
     private String promptMessage;
 
     public MapAndMovingView() {
-        this.menu = ""
+        super("\n"
                 + "\n|#################################################################################|"
                 + "\n|##################################||         ||##################################|"
                 + "\n|##################################||  enter  ||##################################|"
@@ -60,44 +60,10 @@ class MapAndMovingView {
                 + "\n|###############################################     HAll 2                    #|"
                 + "\n|###############################################     HAll 3                    #|"
                 + "\n|###############################################     Room 4                    #|"
-                + "\n|#################################################################################|";
+                + "\n|#################################################################################|");
     }
 
-    public void displayMapAndMovingView() {
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String mapMenuOption = this.getMapMenuOption();
-            if (mapMenuOption.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; // exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(mapMenuOption);
-        } while (!done);
-
-    }
-
-    private String getMapMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; // value returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim();
-
-            if (value.length() < 1) {//value is blank
-                System.out.println("\nInvalid value: val ue can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
+    @Override
     public boolean doAction(String choice) {
         return this.move(choice);
     }
@@ -112,105 +78,105 @@ class MapAndMovingView {
 
     }
 
-    /*    private void roomOne() {
-    System.out.println("/nMove to room 1 "
-    + "Room 2");
-    
+    private void roomOne() {
+        System.out.println("/nMove to room 1 "
+                + "Room 2");
+
     }
-    
+
     private void roomTwo() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomThree() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomFour() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomFive() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomSix() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomSeven() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomEight() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomNine() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomTen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomEleven() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomTwelve() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomThirteen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomFourteen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomFifthteen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomSixteen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomSeventeen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void roomEighteen() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallOne() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallTwo() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallThree() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallFour() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallFive() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallSix() {
-    System.out.println("*** function called ***");
+        System.out.println("*** function called ***");
     }
-    
+
     private void hallSeven() {
-    System.out.println("*** function called ***");
-    }*/
+        System.out.println("*** function called ***");
+    }
 }

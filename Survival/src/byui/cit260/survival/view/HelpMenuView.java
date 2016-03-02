@@ -13,12 +13,12 @@ import survival.Survival;
  *
  * @author macds
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
 
     private String menu;
 
     public HelpMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------"
                 + "\n| Getting help                          |"
                 + "\n-----------------------------------------"
@@ -28,44 +28,11 @@ public class HelpMenuView {
                 + "\nP - Picking up Items"
                 + "\nE - End Game"
                 + "\nQ - Quit"
-                + "\n-----------------------------------------";
+                + "\n-----------------------------------------");
     }
 
-    public void displayHelpMenuView() {
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for and get players name
-            String helpMenuOption = this.getHelpMenuOption();
-            if (helpMenuOption.toUpperCase().equals("Q")) // user wants to quit
-            {
-                return; // exit the game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(helpMenuOption);
-        } while (!done);
 
-    }
-
-    private String getHelpMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; // value returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim();
-
-            if (value.length() < 1) {//value is blank
-                System.out.println("\nInvalid value: val ue can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); // convert choice to upper case
@@ -103,7 +70,7 @@ public class HelpMenuView {
         MapAndMovingView mapAndMovingView = new MapAndMovingView();
 
         // Display the main menu view
-        mapAndMovingView.displayMapAndMovingView();
+        mapAndMovingView.display();
     }
 
     private void fightingEnemies() {
