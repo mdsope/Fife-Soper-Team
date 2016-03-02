@@ -17,19 +17,10 @@ import java.util.Scanner;
  */
 
 
-public class StartProgramView {
-
-    private String promptMessage;
+public class StartProgramView extends View {
 
     public StartProgramView() {
-        this.promptMessage = "\nPlease enter your name:";
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-        System.out.println(
-                "\n*********************************************************"
+        super( "\n*********************************************************"
                 + " \n*                                                       *"
                 + " \n*                                                       *"
                 + " \n* Welcome to Survival as the protagonist,               *"
@@ -51,26 +42,16 @@ public class StartProgramView {
                 + " \n* so it will be easy to overcome a weak enemy           *"
                 + " \n* they have to be weak.                                 *"
                 + " \n*********************************************************"
-        );
-    }
-
-    public void displayStartProgramView() {
-        boolean done = false; // set flag to not done
-        do {
-            //prompt for and get players name
-            String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q")) //user wants to quit
-            {
-                return; //exit the game
-            }
-            // do the requsted action and display the next view
-            done = this.doAction(playersName);
-
-        } while (!done);
+                + "+\n\n Please Enter your name:");
+        
+        
 
     }
 
-    private boolean doAction(String playersName) {
+    
+
+    @Override
+    public boolean doAction(String playersName) {
         if (playersName.length() < 2) {
             System.out.println("\n Invalid players name:"
                     + "The Name must be greater than one character in length");
@@ -84,26 +65,6 @@ public class StartProgramView {
         }
         this.displayNextView(player);
         return true;
-    }
-
-    private String getPlayersName() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; // value returned
-        boolean valid = false; // initialize to not valid
-
-        while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim();
-
-            if (value.length() < 1) {//value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
     }
 
     private void displayNextView(Player player) {

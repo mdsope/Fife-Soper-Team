@@ -12,54 +12,22 @@ import java.util.Scanner;
  *
  * @author Tabitha
  */
-public class CheckOutItemView {
+public class CheckOutItemView extends View {
 
-    private String promptMessage;
+    
 
     public CheckOutItemView() {
-        this.promptMessage = "\n"
+        super("\n"
                 + "\n-------------------------------------------------"
                 + "\n Congratulations please select a checkout item"
                 + "\n-------------------------------------------------"
                 + "\n T - Tiara"
                 + "\n D - Dress"
                 + "\n B - Boots"
-                + "\n-------------------------------------------------";
+                + "\n-------------------------------------------------");
     }
 
-    public void displayCheckOutItemView() {
-        boolean done = false; // set flag to not done
-        do {
-            // prompt for players response
-            String checkOutOption = this.getInput();
-            if (checkOutOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(checkOutOption);
-        } while (!done);
-    }
-
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value returned
-        boolean valid = false; // initalize to not valid
-
-        while (!valid) {// loop while an invalid is entered
-            System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); // get next line in keyboard
-            value = value.trim();
-
-            if (value.length() < 1) {// value is blank
-                System.out.println("Invalid value: value cannot be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-
-    }
-
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); // converts to upper case
