@@ -28,5 +28,10 @@ public class GameControl {
     public static void creatNewGame(Player player) {
         System.out.println("\n*** createNewGame Stub Function called ***");
     }
+    
+    public static boolean saveGameControl(String filelocation) {
+        System.out.println ("\n** save game Called** ");
+        return true;
+    }
 
 }

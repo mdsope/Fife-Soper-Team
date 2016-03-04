@@ -44,7 +44,7 @@ public class MainMenuView extends View {
                 this.displayHelpMenu();
                 break;
             case "S": // save game
-                this.saveGame();
+                this.saveGameMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -62,8 +62,10 @@ public class MainMenuView extends View {
         System.out.println("*** startExistingGame function called ***");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void saveGameMenu() {
+        SaveGameView saveGameView = new SaveGameView();
+        
+        saveGameView.display();
     }
 
     private void displayHelpMenu() {
