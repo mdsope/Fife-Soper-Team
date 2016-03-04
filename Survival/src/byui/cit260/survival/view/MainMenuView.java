@@ -64,7 +64,6 @@ public class MainMenuView extends View {
 
     private void saveGameMenu() {
         SaveGameView saveGameView = new SaveGameView();
-        
         saveGameView.display();
     }
 
