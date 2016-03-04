@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class MapAndMovingView extends View {
 
-    private String menu;
+   
     private String promptMessage;
 
     public MapAndMovingView() {
