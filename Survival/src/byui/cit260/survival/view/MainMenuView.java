@@ -35,7 +35,7 @@ public class MainMenuView extends View {
 
         switch (choice) {
             case "N": // create and start the new game
-                this.startNewGame();
+                this.displayGameView();
                 break;
             case "G": // get and start existing game
                 this.startExistingGame();
@@ -54,8 +54,12 @@ public class MainMenuView extends View {
         return false;
     }
 
-    private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
+   private void displayGameView() {
+        // Create MainMenuView Object
+        GameView gameView = new GameView();
+
+        // Display the main menu view
+        gameView.display();
     }
 
     private void startExistingGame() {
