@@ -18,6 +18,8 @@ public class Item {
     private String name;
     private String Description;
     private String attribute;
+    private Game game;
+    private RegularScene scene;
 
     public Item() {
     }
@@ -61,6 +63,23 @@ public class Item {
     public void setAttribute(String attribute) {
         this.attribute = attribute;
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public RegularScene getScene() {
+        return scene;
+    }
+
+    public void setScene(RegularScene scene) {
+        this.scene = scene;
+    }
+    
 
     @Override
     public int hashCode() {

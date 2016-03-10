@@ -5,6 +5,8 @@
  */
 package byui.cit260.survival.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Tabitha
@@ -14,6 +16,7 @@ public class RegularScene {
     private String description;
     private double travelTime;
     private String blocked;
+    private ArrayList <Item> items;
 
     public RegularScene() {
     }
@@ -40,6 +43,14 @@ public class RegularScene {
 
     public void setBlocked(String blocked) {
         this.blocked = blocked;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
     }
 
     @Override
