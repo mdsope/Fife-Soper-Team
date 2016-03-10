@@ -15,6 +15,7 @@ import java.util.Objects;
 public class NonPlayableCharacter implements Serializable {
 
     private String name;
+    private Player player;
 
     public String getName() {
         return name;
@@ -30,6 +31,15 @@ public class NonPlayableCharacter implements Serializable {
     public String getDescription() {
         return description;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
 
     public void setDescription(String description) {
         this.description = description;

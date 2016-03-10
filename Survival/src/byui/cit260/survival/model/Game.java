@@ -6,6 +6,7 @@
 package byui.cit260.survival.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,8 @@ public class Game implements Serializable {
     //class variables
     private double totalTime;
     private double timeLeft;
+    private Player player;
+    private ArrayList <Item> item;
 
     public Game() {
     }
@@ -69,4 +72,13 @@ public class Game implements Serializable {
     public void setTimeLeft(double timeLeft) {
         this.timeLeft = timeLeft;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
 }

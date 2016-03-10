@@ -6,6 +6,7 @@
 package byui.cit260.survival.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,6 +17,8 @@ public class Player implements Serializable {
 
     //class variables
     private String name;
+    private ArrayList <Game> games;
+    private ArrayList <NonPlayableCharacter> characters;
 
     public Player() {
     }
@@ -27,6 +30,24 @@ public class Player implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public ArrayList<Game> getGames() {
+        return games;
+    }
+
+    public void setGames(ArrayList<Game> games) {
+        this.games = games;
+    }
+
+    public ArrayList<NonPlayableCharacter> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(ArrayList<NonPlayableCharacter> characters) {
+        this.characters = characters;
+    }
+    
+    
 
     @Override
     public int hashCode() {
