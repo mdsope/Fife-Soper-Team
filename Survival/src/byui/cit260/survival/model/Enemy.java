@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author macds
  */
-public class Enemy implements Serializable {
+public class Enemy extends NonPlayableCharacter  {
 
     private String weakness;
     private double strength;
