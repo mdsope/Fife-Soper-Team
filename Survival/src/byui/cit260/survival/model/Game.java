@@ -19,6 +19,16 @@ public class Game implements Serializable {
     private double timeLeft;
     private Player player;
     private ArrayList <Item> item;
+    private NonPlayableCharacter[] nonPlayableCharacter;
+
+    public NonPlayableCharacter[] getNonPlayableCharacter() {
+        return nonPlayableCharacter;
+    }
+
+    public void setNonPlayableCharacter(NonPlayableCharacter[] nonPlayableCharacter) {
+        this.nonPlayableCharacter = nonPlayableCharacter;
+    }
+
 
     public Game() {
     }
