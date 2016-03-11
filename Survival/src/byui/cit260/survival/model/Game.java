@@ -19,6 +19,7 @@ public class Game implements Serializable {
     private double timeLeft;
     private Player player;
     private ArrayList <Item> item;
+    private Map map;
     private NonPlayableCharacter[] nonPlayableCharacter;
 
     public NonPlayableCharacter[] getNonPlayableCharacter() {
@@ -97,6 +98,14 @@ public class Game implements Serializable {
 
     public void setItem(ArrayList<Item> item) {
         this.item = item;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
     
     

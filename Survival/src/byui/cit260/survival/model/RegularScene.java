@@ -17,6 +17,7 @@ public class RegularScene {
     private double travelTime;
     private String blocked;
     private ArrayList <Item> items;
+    private ArrayList <Location> Location;
 
     public RegularScene() {
     }
@@ -52,6 +53,15 @@ public class RegularScene {
     public void setItems(ArrayList<Item> items) {
         this.items = items;
     }
+
+    public ArrayList<Location> getLocation() {
+        return Location;
+    }
+
+    public void setLocation(ArrayList<Location> Location) {
+        this.Location = Location;
+    }
+    
 
     @Override
     public String toString() {

@@ -16,6 +16,7 @@ public class Location {
     private double row;
     private double column;
     private String visited;
+    private RegularScene scene;
 
     public Location() {
     }
@@ -43,6 +44,15 @@ public class Location {
     public void setVisited(String visited) {
         this.visited = visited;
     }
+
+    public RegularScene getScene() {
+        return scene;
+    }
+
+    public void setScene(RegularScene scene) {
+        this.scene = scene;
+    }
+    
 
     @Override
     public int hashCode() {

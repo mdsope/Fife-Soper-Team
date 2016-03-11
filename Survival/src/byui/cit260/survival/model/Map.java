@@ -5,6 +5,8 @@
  */
 package byui.cit260.survival.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Tabitha
@@ -13,6 +15,7 @@ public class Map {
 
     private double rowCount;
     private double columnCount;
+    private ArrayList <Game> game;
 
     public Map() {
     }
@@ -33,6 +36,15 @@ public class Map {
         this.columnCount = columnCount;
 
     }
+
+    public ArrayList<Game> getGame() {
+        return game;
+    }
+
+    public void setGame(ArrayList<Game> game) {
+        this.game = game;
+    }
+    
 
     @Override
     public int hashCode() {
