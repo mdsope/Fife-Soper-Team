@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author macds
  */
-public class CheckOutItem implements Serializable {
+public class CheckOutItem extends Item {
 
     private double size;
 
