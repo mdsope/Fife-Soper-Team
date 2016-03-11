@@ -13,6 +13,7 @@ public class Map {
 
     private double rowCount;
     private double columnCount;
+    private Location[][] locations = new Location[5][5];
 
     public Map() {
     }
@@ -33,6 +34,15 @@ public class Map {
         this.columnCount = columnCount;
 
     }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    
 
     @Override
     public int hashCode() {
