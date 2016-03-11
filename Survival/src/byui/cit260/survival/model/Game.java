@@ -90,5 +90,14 @@ public class Game implements Serializable {
     public void setPlayer(Player player) {
         this.player = player;
     }
+
+    public ArrayList<Item> getItem() {
+        return item;
+    }
+
+    public void setItem(ArrayList<Item> item) {
+        this.item = item;
+    }
+    
     
 }
