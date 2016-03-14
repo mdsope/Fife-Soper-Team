@@ -35,7 +35,9 @@ public class MainMenuView extends View {
 
         switch (choice) {
             case "N": // create and start the new game
-                this.displayGameView();
+                GameControl.createNewGame(Survival.getPlayer());
+                GameView gameView = new GameView();
+                gameView.display();
                 break;
             case "G": // get and start existing game
                 this.startExistingGame();

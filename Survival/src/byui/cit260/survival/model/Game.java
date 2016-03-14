@@ -18,7 +18,7 @@ public class Game implements Serializable {
     private double totalTime;
     private double timeLeft;
     private Player player;
-    private ArrayList <Item> item;
+    private Item[] item;
     private NonPlayableCharacter[] nonPlayableCharacter;
 
     public NonPlayableCharacter[] getNonPlayableCharacter() {
@@ -91,13 +91,18 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public ArrayList<Item> getItem() {
+    public Item[] getItem() {
         return item;
     }
 
-    public void setItem(ArrayList<Item> item) {
+    public void setItem(Item[] item) {
         this.item = item;
     }
-    
+
+    public void setMap(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
     
 }
