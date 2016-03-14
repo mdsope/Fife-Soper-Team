@@ -18,8 +18,9 @@ public class Game implements Serializable {
     private double totalTime;
     private double timeLeft;
     private Player player;
-    private ArrayList <Item> item;
     private Map map;
+    private RegularScene[] scene;
+    private Item[] item;
     private NonPlayableCharacter[] nonPlayableCharacter;
 
     public NonPlayableCharacter[] getNonPlayableCharacter() {
@@ -92,12 +93,20 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public ArrayList<Item> getItem() {
+    public Item[] getItem() {
         return item;
     }
 
-    public void setItem(ArrayList<Item> item) {
+    public void setItem(Item[] item) {
         this.item = item;
+    }
+
+    public RegularScene[] getScene() {
+        return scene;
+    }
+
+    public void setScene(RegularScene[] scene) {
+        this.scene = scene;
     }
 
     public Map getMap() {
@@ -108,5 +117,8 @@ public class Game implements Serializable {
         this.map = map;
     }
     
+    
+
+   
     
 }

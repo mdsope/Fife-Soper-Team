@@ -5,6 +5,9 @@
  */
 package byui.cit260.survival.control;
 
+import byui.cit260.survival.model.Map;
+import byui.cit260.survival.model.RegularScene;
+
 /**
  *
  * @author macds
@@ -98,4 +101,27 @@ public class MapControl {
         return true;
 
     }
+
+    static Map createMap() {
+        // createMap
+        Map map = new Map (5, 5);
+    
+        RegularScene[] scenes = createScenes();
+        
+        assignScenesToLocations(map, scenes);   
+    return map;}
+
+    static void moveActorsToStartingLocation(Map map) {
+        System.out.println("\n Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static RegularScene[] createScenes() {
+        System.out.println("\n Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return null;}
+
+    private static void assignScenesToLocations(Map map, RegularScene[] scenes) {
+        System.out.println("\n Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
+

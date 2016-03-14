@@ -22,6 +22,10 @@ public class Map {
     public Map() {
     }
 
+    public Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public double getRowCount() {
         return rowCount;
     }
