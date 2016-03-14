@@ -129,3 +129,47 @@ public class Item implements Serializable{
     }
 
 }
+/**
+* weapon/item list
+* weapons
+* 
+* hot glue gun
+* cold glue gun
+* exploding chewing gum
+* cat
+* Fifle (he went west it was super effective)
+* the chair (You gave them the Chair!!)
+* PakeBalls
+* Car
+* 
+* Pakichu:
+* (description: Its like Pikachu its just not a pokemon
+* use: The water type died... yeah feel bad about that 
+* enemy: that one water type pokemon you like... yeah that one)
+* 
+* lawn mower seed sower dart blower 
+* (pick up: yes they are all one weapon use on a jungle creature
+* use: Monkey lion tiger gets hit by the blow dart and falls asleep
+* Enemy: Monkey lion tiger)
+* 
+* Steve the warrior 
+* (pick up: This is a guy named Steve with a baseball bat 
+* Use: Steve ran up to zombie and died sneak around 
+* Enemy: Zombie the warrior)
+* 
+* Cannablistic zombie- 
+* (pick up: dont use unless you wish to get ate 
+* Use: you get ate son... or daughter 
+* Enemy: Player)
+* 
+* Limp Biscuit (pick up: rocks hate these 
+* Use:)
+* 
+* 
+* Items
+* potions (replenish 5 health)
+* motions of oceans (full heal plus you feel sea sick -2 to next)
+* lotion (cracked skin is now healed + 5 health)
+* Steve the Healer (+5 health this is a good guy named Steve)
+* 
+*/
