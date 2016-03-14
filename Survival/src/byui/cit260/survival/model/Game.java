@@ -18,6 +18,8 @@ public class Game implements Serializable {
     private double totalTime;
     private double timeLeft;
     private Player player;
+    private Map map;
+    private RegularScene[] scene;
     private Item[] item;
     private NonPlayableCharacter[] nonPlayableCharacter;
 
@@ -99,9 +101,23 @@ public class Game implements Serializable {
         this.item = item;
     }
 
-    public void setMap(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public RegularScene[] getScene() {
+        return scene;
     }
+
+    public void setScene(RegularScene[] scene) {
+        this.scene = scene;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
+    
 
    
     
