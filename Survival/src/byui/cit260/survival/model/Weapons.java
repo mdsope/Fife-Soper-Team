@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author macds
  */
-public class Weapons implements Serializable {
+public class Weapons extends Item {
 
     private double strength;
 
