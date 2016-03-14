@@ -35,7 +35,7 @@ public class GameControl {
         game.setPlayer(player);
         
         //create the inventory list and save in the game
-        Item[] inventoryList = GameControl.createItem();
+        Item[] inventoryList = GameControl.createItemList();
         game.setItem(inventoryList);
        
         Map map = MapControl.createMap(); // create and initalize new map
@@ -50,9 +50,14 @@ public class GameControl {
         return true;
     }
 
-    private static Item[] createItem() {
-        System.out.println("\n Not supported yet.");
-        return null;//To change body of generated methods, choose Tools | Templates.
+    private static Item[] createItemList() {
+        Item[] itemList = new Item[25];
+        Item stevew = new Item();
+        stevew.setName("Steve the warrior");
+        stevew.setAmount(0);
+        stevew.setDescription("");
+        stevew.setAttribute("");
+        return itemList;//To change body of generated methods, choose Tools | Templates.
     }
 
 }
