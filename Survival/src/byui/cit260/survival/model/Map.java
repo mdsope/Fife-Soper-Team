@@ -22,10 +22,31 @@ public class Map {
     public Map() {
     }
 
-    public Map(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Map(int rowCount, int columnCount) {
+        if (rowCount < 1 || columnCount < 1){
+        System.out.println( "\n Your rows and coulmns gots to be greater than 1 silly");
+    return;
+        }
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        
+        //create 2d array fro location objects
+        
+        this.locations = new Location[rowCount][columnCount];
+        for (int row = 0; row < rowCount; row++){
+          for (int column = 0; column < columnCount; column++){
+              Location location = new Location();
+              location.setColumn(column);
+              location.setRow(row);
+              location.setVisited(false);
+              
+              // assign the location object to the current position in array
+              
+              locations[row][column] = location;
+              }
+        }
     }
-
+        
     public double getRowCount() {
         return rowCount;
     }
