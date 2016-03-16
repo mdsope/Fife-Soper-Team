@@ -171,6 +171,10 @@ public class GameControl {
         
         return itemList;//To change body of generated methods, choose Tools | Templates.
     }
+
+    public static Item[] getSortedItemList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
 /**
 * 
