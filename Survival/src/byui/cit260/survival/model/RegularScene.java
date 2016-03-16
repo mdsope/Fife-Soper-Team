@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.model;
 
+import byui.cit260.survival.control.GameControl;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +19,11 @@ public class RegularScene {
     private String blocked;
     private ArrayList <Item> items;
     private ArrayList <Location> Location;
+    private GameControl gameControl;
 
+    
+    
+    
     public RegularScene() {
     }
 
@@ -61,11 +66,23 @@ public class RegularScene {
     public void setLocation(ArrayList<Location> Location) {
         this.Location = Location;
     }
+
+    public GameControl getGameControl() {
+        return gameControl;
+    }
+
+    public void setGameControl(GameControl gameControl) {
+        this.gameControl = gameControl;
+    }
     
 
     @Override
     public String toString() {
         return "RegularScene{" + "description=" + description + ", travelTime=" + travelTime + ", blocked=" + blocked + '}';
+    }
+
+    public void setMapSymbol(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

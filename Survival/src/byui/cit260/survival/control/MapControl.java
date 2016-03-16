@@ -18,79 +18,85 @@ public class MapControl {
         roomNumber = roomNumber.toUpperCase(); // convert choice to upper case
 
         switch (roomNumber) {
+            case "ENTER":
+                System.out.println("\n move to room 1");
+                break;
+            case "EXIT":
+                System.out.println("\n move to room 1");
+                break;    
             case "ROOM 1":
                 System.out.println("\n move to room 1");
                 break;
-            case "Room 2":
+            case "ROOM 2":
                 System.out.println("\n move to room 2");
                 break;
-            case "Room 3":
+            case "ROOM 3":
                 System.out.println("\n move to room 3");
                 break;
-            case "Room 4":
+            case "ROOM 4":
                 System.out.println("\n move to room 4");
                 break;
-            case "Room 5":
+            case "ROOM 5":
                 System.out.println("\n move to room 5");
                 break;
             case "Room 6":
                 System.out.println("\n move to room 6");
                 break;
-            case "Room 7":
+            case "ROOM 7":
                 System.out.println("\n move to room 7");
                 break;
-            case "Room 8":
+            case "ROOM 8":
                 System.out.println("\n move to room 8");
                 break;
-            case "Room 9":
+            case "ROOM 9":
                 System.out.println("\n move to room 9");
                 break;
-            case "Room 10":
+            case "ROOM 10":
                 System.out.println("\n move to room 10");
                 break;
-            case "Room 11":
+            case "ROOM 11":
                 System.out.println("\n move to room 11");
                 break;
-            case "Room 12":
+            case "ROOM 12":
                 System.out.println("\n move to room 12");
                 break;
-            case "Room 13":
+            case "ROOM 13":
                 System.out.println("\n move to room 13");
                 break;
-            case "Room 14":
+            case "ROOM 14":
                 System.out.println("\n move to room 14");
                 break;
-            case "Room 15":
+            case "ROOM 15":
                 System.out.println("\n move to room 15");
                 break;
-            case "Room 16":
+            case "ROOM 16":
                 System.out.println("\n move to room 16");
                 break;
-            case "Room 17":
+            case "ROOM 17":
                 System.out.println("\n move to room 17");
                 break;
-            case "Room 18":
+            case "ROOM 18":
                 System.out.println("\n move to room 18");
                 break;
-            case "Hall 1":
+            case "HALL 1":
                 System.out.println("\n move to Hall 1");
                 break;
-            case "Hall 2":
+            case "HALL 2":
                 System.out.println("\n move to Hall 2");
                 break;
-            case "Hall 3":
+            case "HALL 3":
                 System.out.println("\n move to Hall 3");
                 break;
-            case "Hall 4":
+            case "HALL 4":
                 System.out.println("\n move to Hall 4");
                 break;
-            case "Hall 5":
+            case "HALL 5":
                 System.out.println("\n move to hall 5");
                 break;
-            case "Hall 6":
+            case "HALL 6":
                 System.out.println("\n move to hall 6");
                 break;
-            case "Hall 7":
+            case "HALL 7":
                 System.out.println("\n move to Hall 7");
                 break;
             default:
