@@ -16,7 +16,7 @@ public class Location {
 
     private double row;
     private double column;
-    private String visited;
+    private boolean visited;
     private RegularScene scene;
     private ArrayList <Item>  items = new ArrayList();
 
@@ -39,11 +39,11 @@ public class Location {
         this.column = column;
     }
 
-    public String getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 

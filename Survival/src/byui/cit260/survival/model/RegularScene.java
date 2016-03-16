@@ -16,7 +16,7 @@ public class RegularScene {
 
     private String description;
     private double travelTime;
-    private String blocked;
+    private boolean blocked;
     private ArrayList <Item> items;
     private ArrayList <Location> Location;
     private GameControl gameControl;
@@ -43,11 +43,11 @@ public class RegularScene {
         this.travelTime = travelTime;
     }
 
-    public String getBlocked() {
+    public boolean getBlocked() {
         return blocked;
     }
 
-    public void setBlocked(String blocked) {
+    public void setBlocked(boolean blocked) {
         this.blocked = blocked;
     }
 

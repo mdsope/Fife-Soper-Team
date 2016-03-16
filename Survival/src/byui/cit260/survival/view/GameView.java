@@ -5,6 +5,9 @@
  */
 package byui.cit260.survival.view;
 
+import byui.cit260.survival.control.GameControl;
+import byui.cit260.survival.model.Item;
+
 /**
  *
  * @author Tabitha
@@ -26,6 +29,7 @@ public class GameView extends View {
                 + "\nO - Obtain Item"
                 + "\nZ - Check Out"
                 + "\nS - Save the Game"
+                + "\n  - View Inventory"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------");
     }
@@ -50,20 +54,23 @@ public class GameView extends View {
             case "M": // display help menu
                 this.fightingEnemies();
                 break;
-            case "C": // save game
-                this.pickingUpItems();
+            case "C": // pick up items
+                this.viewCheckOutList();
                 break;
-            case "W": // save game
-                this.endGame();
+            case "W": // view weapons list
+                this.viewWeaponsList();
                 break;
             case "O": // save game
-                this.endGame();
+                this.pickingUpItems();
                 break;
             case "Z": // save game
-                this.endGame();
+                this.checkOutNow();
                 break;
             case "S": // save game
-                this.endGame();
+                this.saveGame();
+                break;
+            case "I": // save game
+                this.viewInventory();
                 break;
             case "Q": // save game
                 this.endGame();
@@ -101,6 +108,38 @@ public class GameView extends View {
 
     private void endGame() {
         System.out.println("*** endGame() function called ***");
+    }
+
+    private void viewWeaponsList() {
+        System.out.println("*** endGame() function called ***");
+    }
+
+    private void viewCheckOutList() {
+        System.out.println("*** endGame() function called ***");
+    }
+
+    private void checkOutNow() {
+        System.out.println("*** endGame() function called ***");
+    }
+
+    private void saveGame() {
+        System.out.println("*** saveGame() function called ***");
+    }
+
+    private void viewInventory() {
+        Item[] inventory = GameControl.getSortedItemList();
+        System.out.println("\n List of Inventory Items");
+        System.out.println("Description" + "\t" + "Required" +"\t" + "In Stock");
+    
+    // for each inventory item
+    for (Item item : inventory){
+     // Display the stuff.
+     System.out.println (item.getDescription() + "\t  " + 
+                        item.getName() + "\t " +
+                        item.getAttribute() + "\t " + 
+                        item.getType() + "\t " +
+                        item.getAmount());
+       }
     }
 }
 

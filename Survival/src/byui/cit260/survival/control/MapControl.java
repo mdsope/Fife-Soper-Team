@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.control;
 
+import byui.cit260.survival.model.Location;
 import byui.cit260.survival.model.Map;
 import byui.cit260.survival.model.RegularScene;
 
@@ -126,7 +127,11 @@ public class MapControl {
     return null;}
 
     private static void assignScenesToLocations(Map map, RegularScene[] scenes) {
-        System.out.println("\n Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Location[][] locations = map.getLocations();
+        
+        //start point
+        locations[0][0].setScene(scenes[GameControl.SceneType.start.ordinal()]);
+        locations[0][1].setScene(scenes[GameControl.SceneType.finish.ordinal()]);
     }
     
 }
