@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.model;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,7 @@ public class Location {
     private double column;
     private boolean visited;
     private RegularScene scene;
+    private ArrayList <Item>  items = new ArrayList();
 
     public Location() {
     }
@@ -52,6 +54,16 @@ public class Location {
     public void setScene(RegularScene scene) {
         this.scene = scene;
     }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
+    }
+
+
     
 
     @Override
