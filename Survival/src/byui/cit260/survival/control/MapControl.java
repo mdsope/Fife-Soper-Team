@@ -40,7 +40,7 @@ public class MapControl {
             case "ROOM 5":
                 System.out.println("\n move to room 5");
                 break;
-            case "Room 6":
+            case "ROOM 6":
                 System.out.println("\n move to room 6");
                 break;
             case "ROOM 7":
