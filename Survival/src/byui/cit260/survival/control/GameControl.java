@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.control;
 
+import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Game;
 import byui.cit260.survival.model.Item;
 import byui.cit260.survival.model.Location;
@@ -112,8 +113,35 @@ public class GameControl {
     }
 
     public static Item[] getSortedItemList() {
-        
+        System.out.println("\n *** getSortedInventoryLIst stub function called ***");
+        return null;
     }
+    
+    private static CheckOutItem[] createCheckOutList() {
+        CheckOutItem[] checkOutList = new CheckOutItem[3];
+        
+        CheckOutItem Tiara = new CheckOutItem(); //1
+        Tiara.setName("Tiara");
+        Tiara.setAmount(0);
+        Tiara.setDescription("A pretty princess tiara for your pretty princess.");
+        Tiara.setAttribute("You could try to wear this but it makes you feel girly");
+        
+        //To change body of generated methods, choose Tools | Templates.
+        
+         CheckOutItem Dress = new CheckOutItem(); //1
+        Dress.setName("Dress");
+        Dress.setAmount(0);
+        Dress.setDescription("A pretty princess Dress for your pretty princess.");
+        Dress.setAttribute("Your Bodacious Thunder Thighs are too much for this dress to handle");
+        //To change body of generated methods, choose Tools | Templates.
+        
+        CheckOutItem Boots = new CheckOutItem(); //1
+        Boots.setName("Dress");
+        Boots.setAmount(0);
+        Boots.setDescription("Some Rugged blue Army boots for you little princess");
+        Boots.setAttribute("There is not room in these dainty boots for your monsorous feet ");
+    return checkOutList;}
+     
    
     private static Weapons[] createWeaponList() {
         Weapons[] weaponList = new Weapons[19];

@@ -29,7 +29,7 @@ public class GameView extends View {
                 + "\nO - Obtain Item"
                 + "\nZ - Check Out"
                 + "\nS - Save the Game"
-                + "\n  - View Inventory"
+                + "\nI  - View Inventory"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------");
     }
@@ -129,7 +129,7 @@ public class GameView extends View {
     private void viewInventory() {
         Item[] inventory = GameControl.getSortedItemList();
         System.out.println("\n List of Inventory Items");
-        System.out.println("Description" + "\t" + "Required" +"\t" + "In Stock");
+        System.out.println("Name" + "\t" + "Description" +"\t" + "Amount owned" +"\t" +"Attribute");
     
     // for each inventory item
     for (Item item : inventory){
