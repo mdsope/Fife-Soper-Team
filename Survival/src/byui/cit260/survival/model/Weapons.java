@@ -15,6 +15,7 @@ public class Weapons extends Item {
 
     private double strength;
 
+
     public Weapons() {
     }
 
