@@ -5,63 +5,87 @@
  */
 package byui.cit260.survival.control;
 
+import citbyui.cit260.survival.exceptions.InventoryControlException;
+
 /**
  *
  * @author Tabitha
  */
 public class InventoryControl {
 
-    public double getSize(double length, double width) {
+    public double getSize(double length, double width) throws InventoryControlException {
 
         if (length < 0) {
-            return -1;
+            throw new InventoryControlException("The length that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
         if (width < 0) {
-            return -1;
+            throw new InventoryControlException("The width that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
         double area = length * width;
         if (area > 30) {
-            return -4;
+            throw new InventoryControlException("The length and width that you have Chosen"
+                                              + "makes the area greater than 30 so you got it"
+                                              + "Wrong! Try Again.");
         }
         if (area < 20) {
-            return -3;
+            throw new InventoryControlException("The length and width that you have Chosen"
+                                              + "makes the area less than 20 so you got it"
+                                              + "Wrong! Try Again.");
         }
         return area;
 
     }
 
-    public double getTiara(double base, double height) {
+    public double getTiara(double base, double height) throws InventoryControlException {
 
         if (base < 0) {
-            return -1;
+            throw new InventoryControlException("The base that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
         if (height < 0) {
 
-            return -1;
+            throw new InventoryControlException("The height that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
 
         double area = (6 * base * height) + (3 * Math.sqrt(3 * Math.pow(base, 2)));
         if (area > 90 || area < 80) {
-            return -4;
+            throw new InventoryControlException("The radius and height that you have Chosen"
+                                              + "makes the volume less than 70 or"
+                                              + "greater than 80 so you got it Wrong! Try Again.");
         }
 
         return area;
     }
 
-    public double getboots(double radius, double height) {
+    public double getboots(double radius, double height) throws InventoryControlException {
         if (radius < 0) {
-            return -1;
+            throw new InventoryControlException("The radius that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
         if (height < 0) {
-            return -1;
+            throw new InventoryControlException("The height that you have Chosen"
+                                              + "is less than zero so you got it"
+                                              + "Wrong! Try Again.");
         }
         double volume = Math.PI * Math.pow(radius, 2) * (height);
 
         if (volume > 80) {
-            return -4;
+            throw new InventoryControlException("The radius and height that you have Chosen"
+                                              + "makes the volume greater than 80 so you got it"
+                                              + "Wrong! Try Again.");
         }
         if (volume < 70) {
-            return -3;
+            throw new InventoryControlException("The radius and height that you have Chosen"
+                                              + "makes the volume less than 70 so you got it"
+                                              + "Wrong! Try Again.");
         }
         return volume;
 
