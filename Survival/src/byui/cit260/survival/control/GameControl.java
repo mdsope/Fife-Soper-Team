@@ -112,6 +112,24 @@ public class GameControl {
 
         return itemList;//To change body of generated methods, choose Tools | Templates.
     }
+public static Item[] getSortedItemList(Item[] itemList) {
+
+        for (int i = 0; i < itemList.length - 1; i++) {
+
+            for (int j = i + 1; j < itemList.length - 1; j++) {
+                if (itemList[i].getName().compareTo(itemList[j].getName()) < 0) {
+                    Item lowerAlpha = itemList[j];
+                    itemList[j] = itemList[i];
+                    itemList[i] = lowerAlpha;
+                    
+                            
+                }
+            }
+
+        }
+
+        return itemList;
+    }
 
     public static Item[] getSortedItemList() {
         System.out.println("\n *** getSortedInventoryLIst stub function called ***");
@@ -287,6 +305,24 @@ public class GameControl {
         weaponList[16] = (Weapons) trash;
 
         return weaponList;//To change body of generated methods, choose Tools | Templates.
+    }
+       public static Weapons[] getSortedWeaponList(Weapons[] weaponList) {
+
+        for (int i = 0; i < weaponList.length - 1; i++) {
+
+            for (int j = i + 1; j < weaponList.length - 1; j++) {
+                if (weaponList[i].getName().compareTo(weaponList[j].getName()) < 0) {
+                    Weapons lowerAlpha = weaponList[j];
+                    weaponList[j] = weaponList[i];
+                    weaponList[i] = lowerAlpha;
+                    
+                            
+                }
+            }
+
+        }
+
+        return weaponList;
     }
     /**
      *
