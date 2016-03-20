@@ -6,6 +6,7 @@
 package byui.cit260.survival.view;
 
 import byui.cit260.survival.control.GameControl;
+import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Item;
 
 /**
@@ -115,9 +116,8 @@ public class GameView extends View {
     }
 
     private void viewCheckOutList() {
-        System.out.println("*** endGame() function called ***");
-    }
-
+       System.out.println("*** viewCheckOutList() function called ***");
+}
     private void checkOutNow() {
         System.out.println("*** endGame() function called ***");
     }
