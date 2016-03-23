@@ -6,6 +6,7 @@
 package byui.cit260.survival.view;
 
 import byui.cit260.survival.control.InventoryControl;
+import citbyui.cit260.survival.exceptions.GetBootsException;
 import citbyui.cit260.survival.exceptions.InventoryControlException;
 import java.util.Scanner;
 
@@ -52,14 +53,14 @@ public class CheckOutItemView extends View {
         this.promptMessage = "Enter your height";
         // calln getInput to get value
         String value = this.getInput();
-        double height= 0;
-        double base= 0;
+        double height = 0;
+        double base = 0;
         // covert value entererd to integer
-        try{
+        try {
             height = Double.parseDouble(value);
         } catch (NumberFormatException nf) {
             System.out.println("\nYou must enter a valid number."
-                              +"Try again or enter Q to quit.");
+                    + "Try again or enter Q to quit.");
             return;
         }
 
@@ -68,11 +69,11 @@ public class CheckOutItemView extends View {
         // calln getInput to get value
         value = this.getInput();
         // covert value entererd to integer
-        try{
-        base = Double.parseDouble(value);
+        try {
+            base = Double.parseDouble(value);
         } catch (NumberFormatException nf) {
             System.out.println("\nYou must enter a valid number."
-                             +"Try again or enter Q to quit.");
+                    + "Try again or enter Q to quit.");
             return;
         }
         // covert value to integer
@@ -86,7 +87,6 @@ public class CheckOutItemView extends View {
         }
 
         this.promptMessage = "Congrats";
-        
 
     }
 
@@ -95,6 +95,42 @@ public class CheckOutItemView extends View {
     }
 
     private void getBoots() {
-        System.out.println("\n getBoots function called");
+        this.promptMessage = "Enter your height";
+        // calln getInput to get value
+        String value = this.getInput();
+        double radius = 0;
+        double height = 0;
+        // covert value entererd to integer
+        try {
+            height = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                    + "Try again or enter Q to quit.");
+            return;
+        }
+
+        // set promptMessage = "Enter the width"
+        this.promptMessage = "Enter your radius";
+        // calln getInput to get value
+        value = this.getInput();
+        // covert value entererd to integer
+        try {
+            radius = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                    + "Try again or enter Q to quit.");
+            return;
+        }
+        // covert value to integer
+        // call control function to do whatever
+        InventoryControl inventoryControl = new InventoryControl();
+        try {
+            inventoryControl.getBoots(radius, height);
+        } catch (GetBootsException me) {
+            System.out.println(me.getMessage());
+            return;
+        }
+
+        this.promptMessage = "Congrats";
     }
 }

@@ -5,6 +5,7 @@
  */
 package byui.cit260.survival.control;
 
+import citbyui.cit260.survival.exceptions.GetBootsException;
 import citbyui.cit260.survival.exceptions.InventoryControlException;
 
 /**
@@ -64,26 +65,26 @@ public class InventoryControl {
         
     }
 
-    public void getboots(double radius, double height) throws InventoryControlException {
+    public void getBoots(double radius, double height) throws GetBootsException {
         if (radius < 0) {
-            throw new InventoryControlException("The radius that you have Chosen"
+            throw new GetBootsException("The radius that you have Chosen"
                                               + "is less than zero so you got it"
                                               + "Wrong! Try Again.");
         }
         if (height < 0) {
-            throw new InventoryControlException("The height that you have Chosen"
+            throw new GetBootsException("The height that you have Chosen"
                                               + "is less than zero so you got it"
                                               + "Wrong! Try Again.");
         }
         double volume = Math.PI * Math.pow(radius, 2) * (height);
 
         if (volume > 80) {
-            throw new InventoryControlException("The radius and height that you have Chosen"
+            throw new GetBootsException("The radius and height that you have Chosen"
                                               + "makes the volume greater than 80 so you got it"
                                               + "Wrong! Try Again.");
         }
         if (volume < 70) {
-            throw new InventoryControlException("The radius and height that you have Chosen"
+            throw new GetBootsException("The radius and height that you have Chosen"
                                               + "makes the volume less than 70 so you got it"
                                               + "Wrong! Try Again.");
         }
