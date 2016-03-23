@@ -43,7 +43,14 @@ public class Survival {
     public static void main(String[] args) {
 
         StartProgramView startProgramView = new StartProgramView();
+        try{
+        
         startProgramView.display();
+        }catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
 
         /*
         // Create MainMenuView Object

@@ -13,7 +13,7 @@ import citbyui.cit260.survival.exceptions.InventoryControlException;
  */
 public class InventoryControl {
 
-    public double getSize(double length, double width) throws InventoryControlException {
+    public void getSize(double length, double width) throws InventoryControlException {
 
         if (length < 0) {
             throw new InventoryControlException("The length that you have Chosen"
@@ -36,11 +36,11 @@ public class InventoryControl {
                                               + "makes the area less than 20 so you got it"
                                               + "Wrong! Try Again.");
         }
-        return area;
+        
 
     }
 
-    public double getTiara(double base, double height) throws InventoryControlException {
+    public void getTiara(double base, double height) throws InventoryControlException {
 
         if (base < 0) {
             throw new InventoryControlException("The base that you have Chosen"
@@ -61,10 +61,10 @@ public class InventoryControl {
                                               + "greater than 80 so you got it Wrong! Try Again.");
         }
 
-        return area;
+        
     }
 
-    public double getboots(double radius, double height) throws InventoryControlException {
+    public void getboots(double radius, double height) throws InventoryControlException {
         if (radius < 0) {
             throw new InventoryControlException("The radius that you have Chosen"
                                               + "is less than zero so you got it"
@@ -87,7 +87,7 @@ public class InventoryControl {
                                               + "makes the volume less than 70 so you got it"
                                               + "Wrong! Try Again.");
         }
-        return volume;
+        
 
     }
 }

@@ -6,6 +6,7 @@
 package byui.cit260.survival.view;
 
 import byui.cit260.survival.control.InventoryControl;
+import citbyui.cit260.survival.exceptions.InventoryControlException;
 import java.util.Scanner;
 
 /**
@@ -13,8 +14,6 @@ import java.util.Scanner;
  * @author Tabitha
  */
 public class CheckOutItemView extends View {
-
-    
 
     public CheckOutItemView() {
         super("\n"
@@ -53,32 +52,42 @@ public class CheckOutItemView extends View {
         this.promptMessage = "Enter your height";
         // calln getInput to get value
         String value = this.getInput();
+        double height= 0;
+        double base= 0;
         // covert value entererd to integer
-        double height = Double.parseDouble(value);
+        try{
+            height = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                              +"Try again or enter Q to quit.");
+            return;
+        }
 
         // set promptMessage = "Enter the width"
         this.promptMessage = "Enter your base";
         // calln getInput to get value
         value = this.getInput();
         // covert value entererd to integer
-        double base = Double.parseDouble(value);
+        try{
+        base = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                             +"Try again or enter Q to quit.");
+            return;
+        }
         // covert value to integer
         // call control function to do whatever
         InventoryControl inventoryControl = new InventoryControl();
-        double tiara = inventoryControl.getTiara(base, height);
-
-        // if unsuccessful then display error and return
-        if (tiara == -1) {
-            this.promptMessage = "Base or Height is below 0";
-        } else if (tiara == -4) {
-            this.promptMessage = "Area is not within 80 or 90";
-        } // if successful then display succes message
-        else if (tiara > 0) {
-            this.promptMessage = "Congrats";
-        } // if something crazy happens
-        else {
-            this.promptMessage = "uuuuuhhh somethings wrong";
+        try {
+            inventoryControl.getTiara(base, height);
+        } catch (InventoryControlException me) {
+            System.out.println(me.getMessage());
+            return;
         }
+
+        this.promptMessage = "Congrats";
+        
+
     }
 
     private void getDress() {
