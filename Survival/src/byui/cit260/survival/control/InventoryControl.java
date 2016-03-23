@@ -6,6 +6,7 @@
 package byui.cit260.survival.control;
 
 import citbyui.cit260.survival.exceptions.GetBootsException;
+import citbyui.cit260.survival.exceptions.GetTiaraException;
 import citbyui.cit260.survival.exceptions.InventoryControlException;
 
 /**
@@ -41,23 +42,23 @@ public class InventoryControl {
 
     }
 
-    public void getTiara(double base, double height) throws InventoryControlException {
+    public void getTiara(double base, double height) throws GetTiaraException {
 
         if (base < 0) {
-            throw new InventoryControlException("The base that you have Chosen"
+            throw new GetTiaraException("The base that you have Chosen"
                                               + "is less than zero so you got it"
                                               + "Wrong! Try Again.");
         }
         if (height < 0) {
 
-            throw new InventoryControlException("The height that you have Chosen"
+            throw new GetTiaraException("The height that you have Chosen"
                                               + "is less than zero so you got it"
                                               + "Wrong! Try Again.");
         }
 
         double area = (6 * base * height) + (3 * Math.sqrt(3 * Math.pow(base, 2)));
         if (area > 90 || area < 80) {
-            throw new InventoryControlException("The radius and height that you have Chosen"
+            throw new GetTiaraException("The radius and height that you have Chosen"
                                               + "makes the volume less than 70 or"
                                               + "greater than 80 so you got it Wrong! Try Again.");
         }

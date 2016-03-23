@@ -6,6 +6,7 @@
 package byui.cit260.survival.view;
 
 import byui.cit260.survival.control.InventoryControl;
+import citbyui.cit260.survival.exceptions.GetTiaraException;
 import citbyui.cit260.survival.exceptions.GetBootsException;
 import citbyui.cit260.survival.exceptions.InventoryControlException;
 import java.util.Scanner;
@@ -37,7 +38,7 @@ public class CheckOutItemView extends View {
                 this.getTiara();
                 break;
             case "D": // gets dress
-                this.getDress();
+                this.getSize();
                 break;
             case "B": // display boots
                 this.getBoots();
@@ -81,7 +82,7 @@ public class CheckOutItemView extends View {
         InventoryControl inventoryControl = new InventoryControl();
         try {
             inventoryControl.getTiara(base, height);
-        } catch (InventoryControlException me) {
+        } catch (GetTiaraException me) {
             System.out.println(me.getMessage());
             return;
         }
@@ -90,8 +91,44 @@ public class CheckOutItemView extends View {
 
     }
 
-    private void getDress() {
-        System.out.println("\n getDress function called");
+    private void getSize() {
+         this.promptMessage = "Enter your height";
+        // calln getInput to get value
+        String value = this.getInput();
+        double length= 0;
+        double width= 0;
+        // covert value entererd to integer
+        try{
+            length = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                              +"Try again or enter Q to quit.");
+            return;
+        }
+
+        // set promptMessage = "Enter the width"
+        this.promptMessage = "Enter your base";
+        // calln getInput to get value
+        value = this.getInput();
+        // covert value entererd to integer
+        try{
+        width = Double.parseDouble(value);
+        } catch (NumberFormatException nf) {
+            System.out.println("\nYou must enter a valid number."
+                             +"Try again or enter Q to quit.");
+            return;
+        }
+        // covert value to integer
+        // call control function to do whatever
+        InventoryControl inventoryControl = new InventoryControl();
+        try {
+            inventoryControl.getSize(width, length);
+        } catch (InventoryControlException me) {
+            System.out.println(me.getMessage());
+            return;
+        }
+
+        this.promptMessage = "Congrats";
     }
 
     private void getBoots() {
