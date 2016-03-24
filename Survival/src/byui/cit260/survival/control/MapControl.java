@@ -31,10 +31,10 @@ public class MapControl {
 
         switch (roomNumber) {
             case "ENTER":
-                System.out.println("\n move to room 1");
+                System.out.println("\n move to Enter");
                 break;
             case "EXIT":
-                System.out.println("\n move to room 1");
+                System.out.println("\n move to Exit");
                 break;
             case "ROOM 1":
                 System.out.println("\n move to room 1");
@@ -124,7 +124,7 @@ public class MapControl {
         // createMap
         Map map = new Map(5, 5);
 
-        RegularScene[] scenes = createScenes();
+        RegularScene[] scenes = GameControl.createScenes();
 
         assignScenesToLocations(map, scenes);
         return map;
@@ -134,7 +134,7 @@ public class MapControl {
         System.out.println("\n Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static RegularScene[] createScenes() {
+    /**private static RegularScene[] createScenes() {
         RegularScene[] sceneList = new RegularScene[27];
 
         RegularScene room1 = new RegularScene(); //1
@@ -268,7 +268,7 @@ public class MapControl {
         RegularScene room17 = new RegularScene(); //1
 
         room17.setDescription("You are now in a store called Cows for Mays"
-                           + "you see a Rgular guy who likes you. What do you wish to do?");
+                           + "you see a Regular guy who likes you. What do you wish to do?");
         room17.setTravelTime(0);
         room17.setBlocked(false);
         sceneList[0] = (RegularScene) room17;
@@ -346,6 +346,7 @@ public class MapControl {
         enter.setBlocked(false);
         sceneList[0] = (RegularScene) enter;
         
+        
         RegularScene exit = new RegularScene(); //1
 
         exit.setDescription("Do you have everything that you came here to find? "
@@ -362,7 +363,7 @@ public class MapControl {
     public static RegularScene[] getSortedWeaponList(RegularScene[] sceneList) {
 
         return sceneList;
-    }
+    }*/
 
     private static void assignScenesToLocations(Map map, RegularScene[] scenes) {
         Location[][] locations = map.getLocations();
@@ -370,6 +371,33 @@ public class MapControl {
         //start point
         locations[0][0].setScene(scenes[GameControl.SceneType.start.ordinal()]);
         locations[0][1].setScene(scenes[GameControl.SceneType.finish.ordinal()]);
+        locations[0][2].setScene(scenes[GameControl.SceneType.roomOne.ordinal()]);
+        locations[0][3].setScene(scenes[GameControl.SceneType.roomTwo.ordinal()]);
+        locations[0][4].setScene(scenes[GameControl.SceneType.roomThree.ordinal()]);
+        locations[0][5].setScene(scenes[GameControl.SceneType.roomFour.ordinal()]);
+        locations[0][6].setScene(scenes[GameControl.SceneType.roomFive.ordinal()]);
+        locations[0][7].setScene(scenes[GameControl.SceneType.roomSix.ordinal()]);
+        locations[0][8].setScene(scenes[GameControl.SceneType.roomSeven.ordinal()]);
+        locations[0][9].setScene(scenes[GameControl.SceneType.roomEight.ordinal()]);
+        locations[1][0].setScene(scenes[GameControl.SceneType.roomNine.ordinal()]);
+        locations[1][1].setScene(scenes[GameControl.SceneType.roomTen.ordinal()]);
+        locations[1][2].setScene(scenes[GameControl.SceneType.roomEleven.ordinal()]);
+        locations[1][3].setScene(scenes[GameControl.SceneType.roomTwelve.ordinal()]);
+        locations[1][4].setScene(scenes[GameControl.SceneType.roomThirteen.ordinal()]);
+        locations[1][5].setScene(scenes[GameControl.SceneType.roomFourteen.ordinal()]);
+        locations[1][6].setScene(scenes[GameControl.SceneType.roomFifteen.ordinal()]);
+        locations[1][7].setScene(scenes[GameControl.SceneType.roomSixteen.ordinal()]);
+        locations[1][8].setScene(scenes[GameControl.SceneType.roomSeventeen.ordinal()]);
+        locations[1][9].setScene(scenes[GameControl.SceneType.roomEighteen.ordinal()]);
+        locations[2][0].setScene(scenes[GameControl.SceneType.hallOne.ordinal()]);
+        locations[2][1].setScene(scenes[GameControl.SceneType.hallTwo.ordinal()]);
+        locations[2][2].setScene(scenes[GameControl.SceneType.hallThree.ordinal()]);
+        locations[2][3].setScene(scenes[GameControl.SceneType.hallFour.ordinal()]);
+        locations[2][4].setScene(scenes[GameControl.SceneType.hallFive.ordinal()]);
+        locations[2][5].setScene(scenes[GameControl.SceneType.hallSix.ordinal()]);
+        locations[2][6].setScene(scenes[GameControl.SceneType.hallSeven.ordinal()]);
+
+        
     }
 
 }
