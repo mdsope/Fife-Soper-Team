@@ -1,8 +1,8 @@
-/*
+/**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ 
 package byui.cit260.survival.control;
 
 import byui.cit260.survival.control.InventoryControl;
@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 /**
  *
  * @author Tabitha
- */
+ 
 public class InventoryControlTest {
 
     public InventoryControlTest() {
@@ -28,9 +28,9 @@ public class InventoryControlTest {
     public static void tearDownClass() throws Exception {
     }
 
-    /**
+    
      * Test of getSize method, of class InventoryControl.
-     */
+     
     @Test
     public void testGetSize() {
         System.out.println("getSize");
@@ -71,9 +71,9 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.4);
     }
 
-    /**
+    
      * Test of getboots method, of class InventoryControl.
-     */
+     
     @Test
     public void testGetboots() {
         System.out.println("getboots");
@@ -169,4 +169,4 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.4);
     }
 
-}
+} */
