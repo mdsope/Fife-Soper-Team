@@ -6,6 +6,7 @@
 package byui.cit260.survival.model;
 
 import byui.cit260.survival.control.GameControl;
+import byui.cit260.survival.control.MapControl;
 import java.util.ArrayList;
 
 /**
@@ -17,6 +18,7 @@ public class RegularScene {
     private String description;
     private double travelTime;
     private boolean blocked;
+    private MapControl mapControl;
     private ArrayList <Item> items;
     private ArrayList <Location> Location;
     private GameControl gameControl;
@@ -73,6 +75,14 @@ public class RegularScene {
 
     public void setGameControl(GameControl gameControl) {
         this.gameControl = gameControl;
+    }
+
+    public MapControl getMapControl() {
+        return mapControl;
+    }
+
+    public void setMapControl(MapControl mapControl) {
+        this.mapControl = mapControl;
     }
     
 
