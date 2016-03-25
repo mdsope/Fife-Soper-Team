@@ -50,18 +50,18 @@ public abstract class View implements ViewInterface {
             // get the value entered in the keyboard
              selection = this.keyboard.readLine(); //get infile for keyboard
              selection = selection.trim();
-            System.out.println("\n" + this.promptMessage);
+            this.console.println("\n" + this.promptMessage);
 
            
 
             if (selection.length() < 1) {//value is blank
-                System.out.println("\nInvalid value: val ue can not be blank");
+                this.console.println("\nInvalid value: value can not be blank (you cant be blank sucka)");
                 continue;
             }
             break;
         }
         } catch (Exception e) {
-                System.out.println("Error reading input: " + e.getMessage());
+                this.console.println("Error reading input: " + e.getMessage());
                 }
         return selection;
     }
