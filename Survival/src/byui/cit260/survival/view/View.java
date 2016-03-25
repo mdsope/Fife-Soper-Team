@@ -5,7 +5,10 @@
  */
 package byui.cit260.survival.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import survival.Survival;
 
 /**
  *
@@ -13,6 +16,9 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     protected String promptMessage;
+    
+    protected final BufferedReader keyboard = Survival.getInFile();
+    protected final PrintWriter console = Survival.getOutFile();
     
     public View(){
     }
@@ -37,23 +43,27 @@ public abstract class View implements ViewInterface {
     }
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; // value returned
         boolean valid = false; // initialize to not valid
-
+        String selection = null;
+        try {
         while (!valid) {//loop while an invalid value is enter
+            // get the value entered in the keyboard
+             selection = this.keyboard.readLine(); //get infile for keyboard
+             selection = selection.trim();
             System.out.println("\n" + this.promptMessage);
 
-            value = keyboard.nextLine(); // get next line typed on keyboard
-            value = value.trim();
+           
 
-            if (value.length() < 1) {//value is blank
+            if (selection.length() < 1) {//value is blank
                 System.out.println("\nInvalid value: val ue can not be blank");
                 continue;
             }
             break;
         }
-        return value;
+        } catch (Exception e) {
+                System.out.println("Error reading input: " + e.getMessage());
+                }
+        return selection;
     }
     
     
