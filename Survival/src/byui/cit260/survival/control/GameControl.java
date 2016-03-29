@@ -52,7 +52,7 @@ public class GameControl {
 
         //create the inventory list and save in the game
         Item[] inventoryList = GameControl.createItemList();
-        game.setItem(inventoryList);
+        game.setItems(inventoryList);
 
         Map map = MapControl.createMap(); // create and initalize new map
         game.setMap(map); // save map in game
@@ -378,11 +378,6 @@ public static Item[] getSortedItemList(Item[] itemList) {
         }
 
         return itemList;
-    }
-
-    public static Item[] getSortedItemList() {
-        System.out.println("\n *** getSortedInventoryLIst stub function called ***");
-        return null;
     }
 
     private static CheckOutItem[] createCheckOutList() {

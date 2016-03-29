@@ -8,6 +8,7 @@ package byui.cit260.survival.view;
 import byui.cit260.survival.control.GameControl;
 import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Item;
+import survival.Survival;
 
 /**
  *
@@ -127,7 +128,7 @@ public class GameView extends View {
     }
 
     private void viewInventory() {
-        Item[] inventory = GameControl.getSortedItemList();
+        Item[] inventory = GameControl.getSortedItemList(Survival.getCurrentGame().getItems());
         System.out.println("\n List of Inventory Items");
         System.out.println("Name" + "\t" + "Description" +"\t" + "Amount owned" +"\t" +"Attribute");
     

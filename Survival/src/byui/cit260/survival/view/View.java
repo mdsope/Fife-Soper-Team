@@ -48,9 +48,11 @@ public abstract class View implements ViewInterface {
         try {
         while (!valid) {//loop while an invalid value is enter
             // get the value entered in the keyboard
+             this.console.println("\n" + this.promptMessage);
              selection = this.keyboard.readLine(); //get infile for keyboard
              selection = selection.trim();
-            this.console.println("\n" + this.promptMessage);
+            
+           
 
            
 
