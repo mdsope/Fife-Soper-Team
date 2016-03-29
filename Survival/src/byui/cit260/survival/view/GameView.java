@@ -80,7 +80,7 @@ public class GameView extends View {
                 
                 
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println(this.promptMessage);
                 break;
 
         }
