@@ -6,10 +6,12 @@
 package byui.cit260.survival.control;
 
 import byui.cit260.survival.model.CheckOutItem;
+import byui.cit260.survival.model.Enemy;
 import byui.cit260.survival.model.Game;
 import byui.cit260.survival.model.Item;
 import byui.cit260.survival.model.Location;
 import byui.cit260.survival.model.Map;
+import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
 import byui.cit260.survival.model.RegularScene;
 import byui.cit260.survival.model.Weapons;
@@ -573,6 +575,125 @@ public static Item[] getSortedItemList(Item[] itemList) {
 
         return weaponList;
     }
+        private static NonPlayableCharacter[] createNonPCList() {
+        NonPlayableCharacter[] nonPCList = new NonPlayableCharacter[2];
+
+        NonPlayableCharacter normal = new NonPlayableCharacter(); //1
+        normal.setName("Normal guy who Likes you");
+        /**steveW.setPlayer(Player);*/
+        normal.setDescription("He wants to give you something");
+        nonPCList[0] = (NonPlayableCharacter) normal;
+        
+        NonPlayableCharacter normal2 = new NonPlayableCharacter(); //1
+        normal2.setName("Yet another Normal Guy who likes you");
+        /**steveW.setPlayer(Player);*/
+        normal2.setDescription("He wishes to give you something");
+        nonPCList[1] = (NonPlayableCharacter) normal2;
+
+        return nonPCList;//To change body of generated methods, choose Tools | Templates.
+    }
+        private static Enemy[] createEnemyList() {
+        Enemy[] enemyList = new Enemy[19];
+
+        Enemy zombie = new Enemy(); //1
+        zombie.setName("Zombie the warrior");
+        /**zombie.setWeekness(Steve the Warrior);*/
+        zombie.setDescription("This is a Zombie the warrior with a good baseball bat");
+        enemyList[0] = (Enemy) zombie;
+        
+        Enemy water = new Enemy(); //1
+        water.setName("That one water type pokemon you like... yeah that one");
+        /**water.setWeekness(Pakichu);*/
+        water.setDescription("This is that one water type pokemon you like... yeah that one");
+        enemyList[1] = (Enemy) water;
+        
+        Enemy rock = new Enemy(); //1
+        rock.setName("Rock");
+        /**rock.setWeekness(Limp Biscuit);*/
+        rock.setDescription("Rock");
+        enemyList[2] = (Enemy) rock;
+        
+        Enemy monkeyLT = new Enemy(); //1
+        monkeyLT.setName("Monkey lion tiger");
+        /**rock.setWeekness(lawn mower seed sower dart blower);*/
+        monkeyLT.setDescription("Monkey lion tiger");
+        enemyList[2] = (Enemy) monkeyLT;
+        
+        Enemy iceC = new Enemy(); //1
+        iceC.setName("Ice Cube");
+        /**rock.setWeekness(hot glue gun);*/
+        iceC.setDescription("Ice Cube");
+        enemyList[2] = (Enemy) iceC;
+        
+        Enemy hotB = new Enemy(); //1
+        hotB.setName("Hot Brick");
+        /**hotB.setWeekness(cold glue gun);*/
+        hotB.setDescription("Hot Brick");
+        enemyList[2] = (Enemy) hotB;
+        
+        Enemy evilCash = new Enemy(); //1
+        evilCash.setName("Evil Cashier");
+        /**evilCash.setWeekness(Exploding Chewing Gum);*/
+        evilCash.setDescription("Evil Cashier");
+        enemyList[2] = (Enemy) evilCash;
+        
+        Enemy ballOY = new Enemy(); //1
+        ballOY.setName("Ball of Yarn");
+        /**ballOY.setWeekness(Cat);*/
+        ballOY.setDescription("Ball of Yarn");
+        enemyList[2] = (Enemy) ballOY;
+        
+        Enemy newYork = new Enemy(); //1
+        newYork.setName("New York");
+        /**newYork.setWeekness(Fifle);*/
+        newYork.setDescription("New York");
+        enemyList[2] = (Enemy) newYork;
+        
+        Enemy proW = new Enemy(); //1
+        proW.setName("Pro wrestler");
+        /**proW.setWeekness(The Chair);*/
+        proW.setDescription("Pro wrestler");
+        enemyList[2] = (Enemy) proW;
+        
+        Enemy angryB = new Enemy(); //1
+        angryB.setName("Angry Backpack");
+        /**angryB.setWeekness(PackiBalls);*/
+        angryB.setDescription("Angry Backpack");
+        enemyList[2] = (Enemy) angryB;
+        
+        Enemy prius = new Enemy(); //1
+        prius.setName("Prius");
+        /**prius.setWeekness(Ferrari);*/
+        prius.setDescription("Prius");
+        enemyList[2] = (Enemy) prius;
+        
+        Enemy apple = new Enemy(); //1
+        apple.setName("Apple");
+        /**apple.setWeekness(Bow and Arrow);*/
+        apple.setDescription("Apple");
+        enemyList[2] = (Enemy) apple;
+        
+        Enemy student = new Enemy(); //1
+        student.setName("CIT Major Student");
+        /**student.setWeekness(Java Textbook);*/
+        student.setDescription("CIT Major Student");
+        enemyList[2] = (Enemy) student;
+        
+        Enemy hourOSleep = new Enemy(); //1
+        hourOSleep.setName("8 Hours of Sleep");
+        /**hourOSleep.setWeekness(Day light Savings Time);*/
+        hourOSleep.setDescription("8 Hours of Sleep");
+        enemyList[2] = (Enemy) hourOSleep;
+        
+        Enemy racoon = new Enemy(); //1
+        racoon.setName("Racoon");
+        /**racoon.setWeekness(Trash);*/
+        racoon.setDescription("Racoon");
+        enemyList[2] = (Enemy) racoon;
+
+        return enemyList;//To change body of generated methods, choose Tools | Templates.
+    }
+        
     /**
      *
      * Item: # (pick up: Use: Enemy: )
