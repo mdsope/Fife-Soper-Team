@@ -129,15 +129,14 @@ public class GameView extends View {
     private void viewInventory() {
         Item[] inventory = GameControl.getSortedItemList(Survival.getCurrentGame().getItems());
         System.out.println("\n List of Inventory Items");
-        System.out.println("Name" + "\t" + "Description" +"\t" + "Amount owned" +"\t" +"Attribute");
+        System.out.println("Name" + "\t                " + "Description" +"\t                " + "Amount owned" +"\t                 ");
     
     // for each inventory item
     for (Item item : inventory){
      // Display the stuff.
-     System.out.println (item.getDescription() + "\t  " + 
-                        item.getName() + "\t " +
+     System.out.println (item.getName() + "\t " +
+                        item.getDescription() + "\t  " + 
                         item.getAttribute() + "\t " + 
-                        item.getType() + "\t " +
                         item.getAmount());
        }
     }
