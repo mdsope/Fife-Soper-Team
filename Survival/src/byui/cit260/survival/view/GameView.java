@@ -74,9 +74,8 @@ public class GameView extends View {
             case "I": // save game
                 this.viewInventory();
                 break;
-            case "Q": // save game
-                this.endGame();
-                break;
+            case "Q": // quit
+                return true;
                 
                 
                 
