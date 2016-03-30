@@ -343,21 +343,21 @@ public static RegularScene[] getSortedWeaponList(RegularScene[] sceneList) {
     }
 
     private static Item[] createItemList() {
-        Item[] itemList = new Item[19];
+        Item[] itemList = new Item[2];
 
         Item lotion = new Item(); //18
         lotion.setName("Lotion");
         lotion.setAmount(0);
         lotion.setDescription("cracked skin is now healed + 5 health");
         lotion.setAttribute("");
-        itemList[17] = lotion;
+        itemList[0] = lotion;
 
         Item steveH = new Item(); //19
         steveH.setName("Steve the Healer");
         steveH.setAmount(0);
         steveH.setDescription("+5 health this is a good guy named Steve");
         steveH.setAttribute("");
-        itemList[18] = steveH;
+        itemList[1] = steveH;
 
         return itemList;//To change body of generated methods, choose Tools | Templates.
     }
