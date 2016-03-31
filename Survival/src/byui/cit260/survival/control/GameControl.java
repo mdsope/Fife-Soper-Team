@@ -55,6 +55,9 @@ public class GameControl {
         //create the inventory list and save in the game
         Item[] inventoryList = GameControl.createItemList();
         game.setItems(inventoryList);
+        
+        Weapons[] weaponsList = GameControl.createWeaponList();
+        game.setWeapons(weaponsList);
 
         Map map = MapControl.createMap(); // create and initalize new map
         game.setMap(map); // save map in game
@@ -427,7 +430,7 @@ public static Item[] getSortedItemList(Item[] itemList) {
     }
 
     private static Weapons[] createWeaponList() {
-        Weapons[] weaponList = new Weapons[19];
+        Weapons[] weaponList = new Weapons[17];
 
         Item steveW = new Weapons(); //1
         steveW.setName("Steve the warrior");
