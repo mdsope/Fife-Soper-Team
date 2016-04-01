@@ -8,6 +8,7 @@ package byui.cit260.survival.view;
 import byui.cit260.survival.control.GameControl;
 import byui.cit260.survival.model.CheckOutItem;
 import byui.cit260.survival.model.Item;
+import byui.cit260.survival.model.Weapons;
 import survival.Survival;
 
 /**
@@ -76,9 +77,7 @@ public class GameView extends View {
                 break;
             case "Q": // quit
                 return true;
-                
-                
-                
+
             default:
                 this.console.println(this.promptMessage);
                 break;
@@ -112,12 +111,24 @@ public class GameView extends View {
     }
 
     private void viewWeaponsList() {
-        System.out.println("*** endGame() function called ***");
+        Weapons[] inventory = GameControl.getSortedWeaponList(Survival.getCurrentGame().getWeapons());
+        System.out.println("\n List of Inventory Items");
+        System.out.println("Name" + "\t                " + "Description" + "\t                " + "Amount owned" + "\t                 ");
+
+        // for each inventory item
+        for (Weapons weapons : inventory) {
+            // Display the stuff.
+            System.out.println(weapons.getName() + "\t "
+                    + weapons.getDescription() + "\t  "
+                    + weapons.getAttribute() + "\t "
+                    + weapons.getAmount());
+        }
     }
 
     private void viewCheckOutList() {
-       System.out.println("*** viewCheckOutList() function called ***");
-}
+        System.out.println("*** viewCheckOutList() function called ***");
+    }
+
     private void checkOutNow() {
         System.out.println("*** endGame() function called ***");
     }
@@ -129,18 +140,15 @@ public class GameView extends View {
     private void viewInventory() {
         Item[] inventory = GameControl.getSortedItemList(Survival.getCurrentGame().getItems());
         System.out.println("\n List of Inventory Items");
-        System.out.println("Name" + "\t                " + "Description" +"\t                " + "Amount owned" +"\t                 ");
-    
-    // for each inventory item
-    for (Item item : inventory){
-     // Display the stuff.
-     System.out.println (item.getName() + "\t " +
-                        item.getDescription() + "\t  " + 
-                        item.getAttribute() + "\t " + 
-                        item.getAmount());
-       }
+        System.out.println("Name" + "\t                " + "Description" + "\t                " + "Amount owned" + "\t                 ");
+
+        // for each inventory item
+        for (Item item : inventory) {
+            // Display the stuff.
+            System.out.println(item.getName() + "\t "
+                    + item.getDescription() + "\t  "
+                    + item.getAttribute() + "\t "
+                    + item.getAmount());
+        }
     }
 }
-
-    
-

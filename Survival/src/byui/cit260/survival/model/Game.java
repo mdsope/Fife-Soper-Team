@@ -22,6 +22,7 @@ public class Game implements Serializable {
     private RegularScene[] scene;
     private Item[] items;
     private NonPlayableCharacter[] nonPlayableCharacter;
+    private Weapons[] weapons;
 
     public NonPlayableCharacter[] getNonPlayableCharacter() {
         return nonPlayableCharacter;
@@ -115,6 +116,14 @@ public class Game implements Serializable {
 
     public void setMap(Map map) {
         this.map = map;
+    }
+
+    public Weapons[] getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(Weapons[] weapons) {
+        this.weapons = weapons;
     }
     
     
