@@ -19,6 +19,7 @@ public class Player implements Serializable {
     private String name;
     private ArrayList <Game> games;
     private ArrayList <NonPlayableCharacter> characters;
+    private Item[] inventory;
 
     public Player() {
     }

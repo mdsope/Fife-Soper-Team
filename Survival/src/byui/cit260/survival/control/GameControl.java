@@ -15,6 +15,7 @@ import byui.cit260.survival.model.NonPlayableCharacter;
 import byui.cit260.survival.model.Player;
 import byui.cit260.survival.model.RegularScene;
 import byui.cit260.survival.model.Weapons;
+import java.io.FileOutputStream;
 import survival.Survival;
 
 /**
@@ -347,19 +348,21 @@ public static RegularScene[] getSortedWeaponList(RegularScene[] sceneList) {
     private static Item[] createItemList() {
         Item[] itemList = new Item[2];
 
-        Item lotion = new Item(); //18
+        Item lotion = new Item(); //1
         lotion.setName("Lotion");
         lotion.setAmount(0);
         lotion.setDescription("cracked skin is now healed + 5 health");
         lotion.setAttribute("");
         itemList[0] = lotion;
 
-        Item steveH = new Item(); //19
+        Item steveH = new Item(); //2
         steveH.setName("Steve the Healer");
         steveH.setAmount(0);
         steveH.setDescription("+5 health this is a good guy named Steve");
         steveH.setAttribute("");
         itemList[1] = steveH;
+        
+        
 
         return itemList;//To change body of generated methods, choose Tools | Templates.
     }
